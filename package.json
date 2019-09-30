@@ -1,0 +1,14 @@
+{
+  "name": "jumboyoga",
+  "version": "1.0.0",
+  "description": "静波瑜伽小程序",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "djzhao",
+  "license": "ISC",
+  "dependencies": {
+    "vant-weapp": "^1.0.0-beta.0"
+  }
+}

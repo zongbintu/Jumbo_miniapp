@@ -1,0 +1,19 @@
+/* pages/store/store.wxss */
+
+/* 门店展示 */
+.store_title {
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 50rpx 0 20rpx 0;
+    color: #0fcbca;
+}
+
+.store_show .show_item {
+    width: 100%;
+}
+
+.store_show .show_item image {
+    width: 100%;
+    height: 100%;
+}

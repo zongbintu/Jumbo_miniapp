@@ -1,0 +1,7 @@
+<!-- components/footer.wxml -->
+<view class="footer">
+	<view class="copy">
+		<text>静波瑜伽</text>
+		<text>Copyright © 2019 by Jumbo Yoga</text>
+	</view>
+</view>

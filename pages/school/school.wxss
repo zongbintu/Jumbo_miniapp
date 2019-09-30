@@ -1,0 +1,3 @@
+/* pages/school/school.wxss */
+
+@import "../../utils/wxParse/wxParse.wxss";

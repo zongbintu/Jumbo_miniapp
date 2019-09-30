@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/venue/venue",
+    "pages/home/home",
+    "pages/school/school",
+    "pages/mall/mall",
+    "pages/me/me",
+    "pages/store/store",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#0fcbca",
+    "borderStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/ic_home.png",
+        "selectedIconPath": "images/ic_home_HL.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/venue/venue",
+        "iconPath": "images/ic_venue.png",
+        "selectedIconPath": "images/ic_venue_HL.png",
+        "text": "会馆"
+      },
+      {
+        "pagePath": "pages/school/school",
+        "iconPath": "images/ic_school.png",
+        "selectedIconPath": "images/ic_school_HL.png",
+        "text": "学院"
+      },
+      {
+        "pagePath": "pages/mall/mall",
+        "iconPath": "images/ic_mall.png",
+        "selectedIconPath": "images/ic_mall_HL.png",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "images/ic_me.png",
+        "selectedIconPath": "images/ic_me_HL.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "footer": "components/footer/footer",
+    "van-cell": "vant-weapp/cell/index",
+    "van-cell-group": "vant-weapp/cell-group/index",
+    "van-row": "vant-weapp/row/index",
+    "van-col": "vant-weapp/col/index",
+    "van-dialog": "vant-weapp/dialog/index",
+    "van-notice-bar": "vant-weapp/notice-bar/index",
+    "van-icon": "vant-weapp/icon/index",
+    "van-field": "vant-weapp/field/index",
+    "van-button": "vant-weapp/button/index"
+  }
+}

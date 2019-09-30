@@ -1,0 +1,20 @@
+/* components/footer.wxss */
+
+.footer {
+    background: #eee7;
+    display: block;
+    margin-top: 20rpx;
+}
+
+/* 版权 */
+.copy {
+    padding: 30rpx 0;
+}
+
+.copy text {
+    font-size: 0.7rem;
+    display: block;
+    color: #999999;
+    text-align: center;
+    margin: 15rpx 0;
+}

@@ -1,0 +1,137 @@
+<view class="home">
+  <!-- 首页轮播图：优选课程 -->
+  <swiper class="recommend_class" indicator-dots autoplay indicator-active-color="#fff">
+    <swiper-item class="class_item" wx:for="{{classBanner}}" wx:key="{{index}}">
+      <image src='../../images/{{item.img}}' mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 精品活动 -->
+  <!--<view class="title">精品活动</view>-->
+  <view class="activity">
+    <navigator url="{{item.url}}" hover-class="none" class="activity_item" wx:for="{{activity}}" wx:key="{{index}}">
+      <image src="../../images/{{item.img}}" mode="widthFix"/>
+      <text>{{item.title}}</text>
+    </navigator>
+  </view>
+
+  <!-- 通知 closeable 模式，在右侧显示关闭按钮  mode="closeable" -->
+  <view class="inform">
+    <van-notice-bar backgroundColor="#ECF9FF" color="#409DFB" left-icon="volume-o "
+                    text="河西店创始会员招募，预付200元抵现2000元"/>
+    <image mode="widthFix" src="../../images/hexi.png" />
+    <view class="sign-up">
+      <button>点击立即报名</button>
+    </view>
+  </view>
+  
+  <!-- 精选热门课程 -->
+  <view class="block_title">
+    <image mode="widthFix" src="../../images/quote.png" />
+    <text>精选热门课程</text>
+  </view>
+  <view class="hot-course">
+    <view class="course_item" wx:for="{{hotCourses}}" wx:key="{{index}}">
+        <view class="item_top">
+          <image class="top_bg" src="../../images/{{item.img}}" mode="widthFix" />
+        </view>
+        <view class="item_middle">
+          <view class="title">{{item.title}}</view>
+          <view class="desc van-multi-ellipsis--l2">{{item.desc}}</view>
+        </view>
+        <view class="item_bottom">
+          <text class="price">￥{{item.price}}</text>
+          <van-icon name="add-o" />
+        </view>
+      </view>
+  </view>
+  
+  <!-- 名师进修课程 -->
+  <view class="block_title">
+    <image mode="widthFix" src="../../images/quote.png" />
+    <text>名师进修课程</text>
+  </view>
+  <view class="hot-course">
+    <view class="course_item" wx:for="{{teacherCourses}}" wx:key="{{index}}">
+        <view class="item_top">
+          <image class="top_bg" src="../../images/{{item.img}}" mode="widthFix" />
+        </view>
+        <view class="item_middle">
+          <view class="title">{{item.title}}</view>
+          <view class="desc van-multi-ellipsis--l2">{{item.desc}}</view>
+        </view>
+        <view class="item_bottom">
+          <text class="price">￥{{item.price}}</text>
+          <van-icon name="add-o" />
+        </view>
+      </view>
+  </view>
+  
+  <!-- 热门课程推荐 -->
+  <view class="block_title">
+    <image mode="widthFix" src="../../images/quote.png" />
+    <text>热门课程推荐</text>
+  </view>
+  <view class="recommend-course">
+    <view class="course_item" wx:for="{{recommendCourses}}" wx:key="{{index}}">
+        <view class="item_left">
+          <image class="top_bg" src="../../images/{{item.img}}" mode="widthFix" />
+        </view>
+        <view class="item_right">
+          <view class="title">{{item.title}} </view>
+          <view class="bottom">
+            <text class="price">￥{{item.price}}</text>
+            <text class="purchase">立即抢购</text>
+          </view>
+        </view>
+      </view>
+  </view>
+
+  <!-- 场馆 -->
+  <view class="venue">
+    <image wx:for="{{venues}}" src="../../images/{{item}}" mode="widthFix" wx:key="{{index}}" />
+  </view>
+
+  <view class="block_title">
+    <image mode="widthFix" src="../../images/quote.png" />
+    <text>预约报名</text>
+  </view>
+  <!-- 预约报名 -->
+  <view class="booking">
+    <van-cell-group>
+      <van-field
+          value="{{ username }}"
+          left-icon="contact"
+          clearable
+          label="姓名/称呼"
+          placeholder="请输入您的姓名"
+      />
+
+      <van-field
+          value="{{ phoneNumber }}"
+          left-icon="phone-o"
+          clearable
+          label="手机/电话"
+          placeholder="请输入您的联系方式"
+      />
+
+      <van-field
+          value="{{ message }}"
+          left-icon="comment-o"
+          clearable
+          label="留言内容"
+          placeholder="请输入您需要咨询的内容"
+      />
+    </van-cell-group>
+
+    <view class="submi-btn">
+      <button>提交预约</button>
+    </view>
+
+
+  </view>
+
+  <!-- 页脚 -->
+	<footer />
+
+</view>
