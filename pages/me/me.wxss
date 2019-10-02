@@ -1,1 +1,44 @@
 /* pages/me/me.wxss */
+
+/* 用户信息 */
+.user-info {
+    width: 100%;
+    position: relative;
+    background: url(http://cnd.wgj360.com/User/j/jingboyujia/21089/Pic/2019/06/27/201906271642165167.jpg);
+    height: 300rpx;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info .user {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.user-info .avator {
+    width: 120rpx;
+    border: white 5rpx solid;
+    border-radius: 50%;
+    margin-left: 50rpx;
+}
+
+.user-info .info {
+    margin-left: 40rpx;
+    color: white;
+}
+
+
+.user-info .setting {
+    color: white;
+    position: absolute;
+    right: 40rpx;
+    top: 40rpx;
+}
+
+.user-info .setting van-icon {
+    vertical-align: middle;
+}

@@ -1,2 +1,84 @@
 <!--pages/me/me.wxml-->
-<text>pages/me/me.wxml</text>
+<view class="me">
+	<!-- 用户信息 -->
+	<view class="user-info">
+		<view class="user">
+			<image
+			 class="avator"
+			 src="../../images/default_avator.png"
+			 mode="widthFix"
+			 lazy-load="false"
+			/>
+			<view class="info">
+				<view class="">
+					一碗单炒饭
+				</view>
+				<view class="">
+					金牌用户
+				</view>
+			</view>
+		</view>
+		<view class="setting">
+			<van-icon name="setting-o" />
+			设置
+		</view>
+	</view>
+
+	<!-- 订单信息 -->
+	<view class="order">
+		<van-cell
+		 size="large"
+		 title="我的订单"
+		 is-link
+		 value="全部订单"
+		/>
+		<van-grid clickable="true" column-num="5">
+			<van-grid-item icon="send-gift-o" text="待付款" />
+			<van-grid-item icon="free-postage" text="代发货" />
+			<van-grid-item icon="logistics" text="待收货" />
+			<van-grid-item icon="records" text="待评价" />
+			<van-grid-item icon="after-sale" text="售后" />
+		</van-grid>
+
+		<van-cell
+		 icon="paid"
+		 size="large"
+		 title="我的余额"
+		 is-link
+		/>
+		<van-cell
+		 icon="vip-card-o"
+		 size="large"
+		 title="我的优惠券"
+		 is-link
+		/>
+		<van-cell
+		 icon="gold-coin-o"
+		 size="large"
+		 title="我的积分"
+		 is-link
+		/>
+		<van-cell
+		 icon="star-o"
+		 size="large"
+		 title="我的收藏"
+		 is-link
+		/>
+		<van-cell
+		 icon="balance-o"
+		 size="large"
+		 title="我的佣金"
+		 is-link
+		/>
+		<van-cell
+		 icon="thumb-circle-o"
+		 size="large"
+		 title="我的推广海报"
+		 is-link
+		/>
+	</view>
+
+	<!-- 页脚 -->
+	<footer/>
+</view>
+

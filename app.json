@@ -1,10 +1,12 @@
 {
   "pages": [
-    "pages/venue/venue",
     "pages/home/home",
-    "pages/school/school",
-    "pages/mall/mall",
+    "pages/me/balance/balance_detail/balance_detail",
+    "pages/me/balance/my_balance/my_balance",
     "pages/me/me",
+    "pages/school/school",
+    "pages/venue/venue",
+    "pages/mall/mall",
     "pages/store/store",
     "pages/index/index",
     "pages/logs/logs"
@@ -64,6 +66,9 @@
     "van-notice-bar": "vant-weapp/notice-bar/index",
     "van-icon": "vant-weapp/icon/index",
     "van-field": "vant-weapp/field/index",
-    "van-button": "vant-weapp/button/index"
+    "van-button": "vant-weapp/button/index",
+    "van-grid": "vant-weapp/grid/index",
+    "van-grid-item": "vant-weapp/grid-item/index",
+    "van-divider": "vant-weapp/divider/index"
   }
 }

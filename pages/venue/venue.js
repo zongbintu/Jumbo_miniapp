@@ -8,31 +8,31 @@ Page({
     stores: [
       {
         title: "静波瑜伽太阳城店",
-        storeShow: ['store_1_1.png']
+        storeShow: ["http://cnd.wgj360.com/Admin/Pic/2019/07/02/201907021136372324.png"]
       },
       {
         title: "静波瑜伽河西CBD店",
-        storeShow: ['store_2_1.png']
+        storeShow: ["http://cnd.wgj360.com/Admin/Pic/2019/07/02/201907021140120624.png"]
       },
       {
         title: "静波瑜伽河定桥店",
-        storeShow: ['store_3_1.png']
+        storeShow: ["http://cnd.wgj360.com/Admin/Pic/2019/07/02/201907021138032519.png"]
       },
       {
         title: "静波瑜伽新街口店",
-        storeShow: ['store_4_1.png']
+        storeShow: ["http://cnd.wgj360.com/Admin/Pic/2019/07/02/201907021138334648.png"]
       },
       {
         title: "静波瑜伽金盛路店",
-        storeShow: ['store_5_1.png']
+        storeShow: ["http://cnd.wgj360.com/Admin/Pic/2019/07/02/201907021139056562.png"]
       },
       {
         title: "静波瑜伽山西路店",
-        storeShow: ['store_6_1.png']
+        storeShow: ["http://cnd.wgj360.com/Admin/Pic/2019/07/02/201907021139326181.png"]
       },
       {
         title: "静波瑜伽宝华山静修中心",
-        storeShow: ['store_7_1.png']
+        storeShow: ["http://cnd.wgj360.com/Admin/Pic/2019/07/02/201907021140547275.png"]
       }
     ]
   },

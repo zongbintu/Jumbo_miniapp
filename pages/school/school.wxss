@@ -1,3 +1,31 @@
 /* pages/school/school.wxss */
 
 @import "../../utils/wxParse/wxParse.wxss";
+
+/* 视频介绍 */
+.school .intro_video {
+    width: 100%;
+}
+
+/* 富文本 */
+.article1, article2 {
+    margin: 30rpx;
+}
+
+/* 轮播图 */
+.banner {
+    margin-bottom: 30rpx;
+}
+
+.banner .banner_item {
+    width: 100%;
+}
+
+.banner .banner_item image {
+  width: 100%;
+}
+
+/* 图片介绍 */
+.intor_img {
+    width: 100%;
+}

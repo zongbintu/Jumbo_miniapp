@@ -1,9 +1,53 @@
-<!--pages/school/school.wxml-->
-
-<import src="../../utils/wxParse/wxParse.wxml" /> 
-
-<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
-
+<!-- pages/school/school.wxml -->
+<import src="../../utils/wxParse/wxParse.wxml" />
 <view class="school">
+	<!-- 视频 -->
+	<video
+	 class="intro_video"
+	 src="../../assets/jumbo_intro.mp4"
+	 autoplay="{{false}}"
+	 object-fit="fill"
+	/>
 
+	<!-- 文本介绍 -->
+	<view class="article1" hover-class="none" hover-stop-propagation="false">
+		<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+	</view>
+
+	<!-- 轮播 -->
+	<swiper
+	 class="banner"
+	 indicator-dots
+	 autoplay
+	 indicator-active-color="#fff"
+	>
+		<swiper-item class="banner_item" wx:for="{{banner}}" wx:key="{{index}}">
+			<image src='{{item}}' mode="widthFix" />
+		</swiper-item>
+    </swiper>
+    
+    <!-- 图片介绍 -->
+    <image class="intor_img" src="http://cnd.wgj360.com/Admin/Pic/2019/06/28/201906281446520177.png" mode="widthFix" lazy-load="true" binderror="" bindload="">
+    </image>
+
+	<!-- 文本介绍 -->
+	<view class="article2" hover-class="none" hover-stop-propagation="false">
+		<template is="wxParse" data="{{wxParseData:article2.nodes}}" />
+    </view>
+    
+    <!-- 图片介绍 -->
+    <image class="intor_img" src="http://cnd.wgj360.com/Admin/Pic/2019/06/28/201906281448170685.png" mode="widthFix" lazy-load="true" binderror="" bindload="">
+    </image>
+    <image class="intor_img" src="http://cnd.wgj360.com/Admin/Pic/2019/06/28/201906281448372033.png" mode="widthFix" lazy-load="true" binderror="" bindload="">
+    </image>
+    <image class="intor_img" src="http://cnd.wgj360.com/Admin/Pic/2019/06/28/201906281448537424.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+    </image>
+    <image class="intor_img" src="http://cnd.wgj360.com/Admin/Pic/2019/07/01/201907011624154099.jpg" mode="widthFix" lazy-load="true" binderror="" bindload="">
+    </image>
+    <image class="intor_img" src="http://cnd.wgj360.com/Admin/Pic/2019/07/01/201907011725356192.png" mode="widthFix" lazy-load="true" binderror="" bindload="">
+    </image>
+
+    <!-- 页脚 -->
+	<footer />
 </view>
+

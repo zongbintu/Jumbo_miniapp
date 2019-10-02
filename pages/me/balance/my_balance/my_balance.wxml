@@ -1,0 +1,14 @@
+<!--pages/me/balance/my_balance/my_balance.wxml-->
+<view class="my_balance">
+    <!-- 概览 -->
+    <view class="summary">
+        <view class="amount">0.00</view>
+        <view class="amount_title">我的余额</view>
+    </view>
+
+    <!-- 查看记录 -->
+    <van-cell class="goto_detail" title="余额明细" is-link />
+
+    <!-- 页脚 -->
+	<footer/>
+</view>

@@ -8,15 +8,15 @@ Page({
     classBanner: [
       {
         "title": "新手柔韧提升计划",
-        "img": "banner_01.jpg"
+        "img": "http://cnd.wgj360.com/Admin/Pic/2019/07/08/201907081652485394.jpg"
       },
       {
         "title": "新手柔韧提升计划",
-        "img": "banner_02.png"
+        "img": "http://cnd.wgj360.com/Admin/Pic/2019/07/08/201907081652599416.png"
       },
       {
         "title": "新手柔韧提升计划",
-        "img": "banner_03.jpg"
+        "img": "http://cnd.wgj360.com/Admin/Pic/2019/06/24/201906241357583829.jpg"
       }
     ],
     // 精品活动
@@ -65,25 +65,25 @@ Page({
     // 精选热门课程
     hotCourses: [
       {
-        img: 'hot_course_01.jpg',
+        img: "http://cnd.wgj360.com/User/j/jingboyujia/21089/Pic/2019/06/24/201906241353352685.jpg",
         title: '空中瑜伽教练培训',
         desc: '空中瑜伽，是力量和美的代言，身姿曼妙轻盈，在空中偏偏起舞。',
         price: 2800
       },
       {
-        img: 'hot_course_02.jpg',
+        img: "http://cnd.wgj360.com/User/j/jingboyujia/21089/Pic/2019/06/24/201906241354109285.jpg",
         title: '基础全能班教练班',
         desc: '全能教练 特色进修',
         price: 12800
       },
       {
-        img: 'hot_course_03.jpg',
+        img: "http://cnd.wgj360.com/User/j/jingboyujia/21089/Pic/2019/06/24/201906241354468188.jpg",
         title: '零基础全日制教练班',
         desc: '空权威认证 科学训练',
         price: 9800
       },
       {
-        img: 'hot_course_04.jpg',
+        img: "http://cnd.wgj360.com/User/j/jingboyujia/21089/Pic/2019/06/24/201906241355205423.jpg",
         title: '零基础周末教练培训班',
         desc: '随到随学 推荐就业',
         price: 9800
@@ -92,13 +92,13 @@ Page({
     // 名师进修课程
     teacherCourses: [
       {
-        img: 'teacher_course_01.png',
+        img: "http://cnd.wgj360.com/User/j/jingboyujia/21089/Pic/2019/07/10/201907101512111241.png",
         title: '内观流Inside Flow',
         desc: '',
         price: 2280
       },
       {
-        img: 'teacher_course_02.png',
+        img: "http://cnd.wgj360.com/Admin/Pic/2019/07/10/201907101525477882.png",
         title: '建慧孕产瑜伽培训认证',
         desc: '明星金牌导师',
         price: 4900
@@ -107,19 +107,19 @@ Page({
     // 名师进修课程
     recommendCourses: [
       {
-        img: 'recommend_course_01.png',
+        img: "http://cnd.wgj360.com/User/j/jingboyujia/21089/Pic/2019/07/08/201907081540595573.png",
         title: '纯瑜伽公开课（静波瑜伽特聘外籍老师）',
         desc: '',
         price: 49.90
       },
       {
-        img: 'recommend_course_02.png',
+        img: "http://cnd.wgj360.com/User/j/jingboyujia/21089/Pic/2019/07/02/201907021716298064.png",
         title: '常温瑜珈/高温瑜伽/空中瑜伽（任选1节）',
         desc: '',
         price: 49.90
       },
       {
-        img: 'recommend_course_03.png',
+        img: "http://cnd.wgj360.com/User/j/jingboyujia/21089/Pic/2019/07/02/201907021739338983.png",
         title: '普拉提精品器材小班',
         desc: '',
         price: 98
@@ -127,10 +127,11 @@ Page({
     ],
     // 场馆
     venues: [
-      'venue_01.png',
-      'venue_02.png',
-      'venue_03.png',
-      'venue_04.png'
+      "http://cnd.wgj360.com/Admin/Pic/2019/06/28/201906280914457792.png",
+      "http://cnd.wgj360.com/Admin/Pic/2019/06/28/201906280915009268.png",
+      "http://cnd.wgj360.com/Admin/Pic/2019/06/28/201906280915216535.png",
+      "http://cnd.wgj360.com/Admin/Pic/2019/06/28/201906280915344202.png",
+      "http://cnd.wgj360.com/Admin/Pic/2019/06/28/201906280941559852.png"
     ],
     // 名称/称呼
     username:'',

@@ -2,7 +2,7 @@
   <!-- 首页轮播图：优选课程 -->
   <swiper class="recommend_class" indicator-dots autoplay indicator-active-color="#fff">
     <swiper-item class="class_item" wx:for="{{classBanner}}" wx:key="{{index}}">
-      <image src='../../images/{{item.img}}' mode="widthFix"></image>
+      <image src='{{item.img}}' mode="widthFix"></image>
     </swiper-item>
   </swiper>
 
@@ -19,7 +19,7 @@
   <view class="inform">
     <van-notice-bar backgroundColor="#ECF9FF" color="#409DFB" left-icon="volume-o "
                     text="河西店创始会员招募，预付200元抵现2000元"/>
-    <image mode="widthFix" src="../../images/hexi.png" />
+    <image mode="widthFix" src="http://cnd.wgj360.com/Admin/Pic/2019/06/27/201906271657473069.png" />
     <view class="sign-up">
       <button>点击立即报名</button>
     </view>
@@ -33,7 +33,7 @@
   <view class="hot-course">
     <view class="course_item" wx:for="{{hotCourses}}" wx:key="{{index}}">
         <view class="item_top">
-          <image class="top_bg" src="../../images/{{item.img}}" mode="widthFix" />
+          <image class="top_bg" src="{{item.img}}" mode="widthFix" />
         </view>
         <view class="item_middle">
           <view class="title">{{item.title}}</view>
@@ -54,7 +54,7 @@
   <view class="hot-course">
     <view class="course_item" wx:for="{{teacherCourses}}" wx:key="{{index}}">
         <view class="item_top">
-          <image class="top_bg" src="../../images/{{item.img}}" mode="widthFix" />
+          <image class="top_bg" src="{{item.img}}" mode="widthFix" />
         </view>
         <view class="item_middle">
           <view class="title">{{item.title}}</view>
@@ -75,7 +75,7 @@
   <view class="recommend-course">
     <view class="course_item" wx:for="{{recommendCourses}}" wx:key="{{index}}">
         <view class="item_left">
-          <image class="top_bg" src="../../images/{{item.img}}" mode="widthFix" />
+          <image class="top_bg" src="{{item.img}}" mode="widthFix" />
         </view>
         <view class="item_right">
           <view class="title">{{item.title}} </view>
@@ -89,7 +89,7 @@
 
   <!-- 场馆 -->
   <view class="venue">
-    <image wx:for="{{venues}}" src="../../images/{{item}}" mode="widthFix" wx:key="{{index}}" />
+    <image wx:for="{{venues}}" src="{{item}}" mode="widthFix" wx:key="{{index}}" />
   </view>
 
   <view class="block_title">
