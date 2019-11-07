@@ -2,7 +2,7 @@
   <!-- 首页轮播图：优选课程 -->
   <swiper class="recommend_class" indicator-dots autoplay indicator-active-color="#fff">
     <swiper-item class="class_item" wx:for="{{classBanner}}" wx:key="{{index}}">
-      <image src='{{item.img}}' mode="widthFix"></image>
+      <image src='{{item.imgUrl}}' mode="widthFix"></image>
     </swiper-item>
   </swiper>
 
@@ -16,24 +16,24 @@
   </view>
 
   <!-- 通知 closeable 模式，在右侧显示关闭按钮  mode="closeable" -->
-  <view class="inform">
+  <view class="inform" wx:if="{{notifications.length > 0}}">
     <van-notice-bar backgroundColor="#ECF9FF" color="#409DFB" left-icon="volume-o "
-                    text="河西店创始会员招募，预付200元抵现2000元"/>
+                    text="{{notifications[0].title}}"/>
     <image mode="widthFix" src="http://cnd.wgj360.com/Admin/Pic/2019/06/27/201906271657473069.png" />
     <view class="sign-up">
       <button>点击立即报名</button>
     </view>
   </view>
-  
+
   <!-- 精选热门课程 -->
-  <view class="block_title">
+  <view class="block_title" wx:if="{{hotCourses.length > 0}}">
     <image mode="widthFix" src="../../images/quote.png" />
     <text>精选热门课程</text>
   </view>
   <view class="hot-course">
-    <view class="course_item" wx:for="{{hotCourses}}" wx:key="{{index}}">
+    <navigator url="../product/product?id={{item.goodsId}}" class="course_item" wx:for="{{hotCourses}}" wx:key="{{index}}">
         <view class="item_top">
-          <image class="top_bg" src="{{item.img}}" mode="widthFix" />
+          <image class="top_bg" src="{{item.imageUrl}}" mode="widthFix" />
         </view>
         <view class="item_middle">
           <view class="title">{{item.title}}</view>
@@ -43,18 +43,18 @@
           <text class="price">￥{{item.price}}</text>
           <van-icon name="add-o" />
         </view>
-      </view>
+      </navigator>
   </view>
   
   <!-- 名师进修课程 -->
-  <view class="block_title">
+  <view class="block_title" wx:if="{{teacherCourses.length > 0}}">
     <image mode="widthFix" src="../../images/quote.png" />
     <text>名师进修课程</text>
   </view>
   <view class="hot-course">
-    <view class="course_item" wx:for="{{teacherCourses}}" wx:key="{{index}}">
+    <navigator url="../product/product?id={{item.goodsId}}" class="course_item" wx:for="{{teacherCourses}}" wx:key="{{index}}">
         <view class="item_top">
-          <image class="top_bg" src="{{item.img}}" mode="widthFix" />
+          <image class="top_bg" src="{{item.imageUrl}}" mode="widthFix" />
         </view>
         <view class="item_middle">
           <view class="title">{{item.title}}</view>
@@ -64,18 +64,18 @@
           <text class="price">￥{{item.price}}</text>
           <van-icon name="add-o" />
         </view>
-      </view>
+      </navigator>
   </view>
   
   <!-- 热门课程推荐 -->
-  <view class="block_title">
+  <view class="block_title" wx:if="{{recommendCourses.length > 0}}">
     <image mode="widthFix" src="../../images/quote.png" />
     <text>热门课程推荐</text>
   </view>
   <view class="recommend-course">
-    <view class="course_item" wx:for="{{recommendCourses}}" wx:key="{{index}}">
+    <navigator url="../product/product?id={{item.goodsId}}" class="course_item" wx:for="{{recommendCourses}}" wx:key="{{index}}">
         <view class="item_left">
-          <image class="top_bg" src="{{item.img}}" mode="widthFix" />
+          <image class="top_bg" src="{{item.imageUrl}}" mode="widthFix" />
         </view>
         <view class="item_right">
           <view class="title">{{item.title}} </view>
@@ -84,12 +84,12 @@
             <text class="purchase">立即抢购</text>
           </view>
         </view>
-      </view>
+      </navigator>
   </view>
 
   <!-- 场馆 -->
   <view class="venue">
-    <image wx:for="{{venues}}" src="{{item}}" mode="widthFix" wx:key="{{index}}" />
+    <image wx:for="{{venues}}" src="{{item.imgUrl}}" mode="widthFix" wx:key="{{index}}" />
   </view>
 
   <view class="block_title">
@@ -104,6 +104,7 @@
           left-icon="contact"
           clearable
           label="姓名/称呼"
+          bind:change="onNameChange"
           placeholder="请输入您的姓名"
       />
 
@@ -112,6 +113,7 @@
           left-icon="phone-o"
           clearable
           label="手机/电话"
+          bind:change="onPhoneChange"
           placeholder="请输入您的联系方式"
       />
 
@@ -120,14 +122,14 @@
           left-icon="comment-o"
           clearable
           label="留言内容"
+          bind:change="onMessageChange"
           placeholder="请输入您需要咨询的内容"
       />
     </van-cell-group>
 
     <view class="submi-btn">
-      <button>提交预约</button>
+      <button bindtap="submitAppointment">提交预约</button>
     </view>
-
 
   </view>
 

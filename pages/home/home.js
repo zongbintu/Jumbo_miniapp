@@ -1,3 +1,7 @@
+let app = getApp();
+
+import request from "../../utils/request";
+
 Page({
 
   /**
@@ -8,15 +12,15 @@ Page({
     classBanner: [
       {
         "title": "新手柔韧提升计划",
-        "img": "http://cnd.wgj360.com/Admin/Pic/2019/07/08/201907081652485394.jpg"
+        "imgUrl": "http://cnd.wgj360.com/Admin/Pic/2019/07/08/201907081652485394.jpg"
       },
       {
         "title": "新手柔韧提升计划",
-        "img": "http://cnd.wgj360.com/Admin/Pic/2019/07/08/201907081652599416.png"
+        "imgUrl": "http://cnd.wgj360.com/Admin/Pic/2019/07/08/201907081652599416.png"
       },
       {
         "title": "新手柔韧提升计划",
-        "img": "http://cnd.wgj360.com/Admin/Pic/2019/06/24/201906241357583829.jpg"
+        "imgUrl": "http://cnd.wgj360.com/Admin/Pic/2019/06/24/201906241357583829.jpg"
       }
     ],
     // 精品活动
@@ -62,6 +66,10 @@ Page({
         img: "ic_contact.jpg"
       }
     ],
+    // 通知消息
+    notifications: [],
+    // 推荐课程 0精选热门课程；1名师进修课程；2热门推荐课程
+    recommendCourse: [],
     // 精选热门课程
     hotCourses: [
       {
@@ -104,7 +112,7 @@ Page({
         price: 4900
       }
     ],
-    // 名师进修课程
+    // 热门课程推荐
     recommendCourses: [
       {
         img: "http://cnd.wgj360.com/User/j/jingboyujia/21089/Pic/2019/07/08/201907081540595573.png",
@@ -134,19 +142,182 @@ Page({
       "http://cnd.wgj360.com/Admin/Pic/2019/06/28/201906280941559852.png"
     ],
     // 名称/称呼
-    username:'',
+    username: '',
     // 手机/电话
-    phoneNumber: ''
+    phoneNumber: '',
+    // 留言内容
+    message: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setTabBarBadge({
-      index: 3,
-      text: '1'
+    let that = this;
+
+    // 请求轮播图
+    request.send({
+      url: '/slideImage',
+      data: {},
+      success: res => {
+        that.setData({
+          classBanner: res.data.images
+        });
+      }
+    });
+
+    // 请求通知
+    request.send({
+      url: '/notification',
+      data: {},
+      success: res => {
+        that.setData({
+          notifications: res.data.notifications
+        });
+      }
+    });
+
+    // 请求推荐课程
+    request.send({
+      url: '/recommendCourse',
+      data: {},
+      success: res => {
+        that.setData({
+          hotCourses: [],
+          teacherCourses: [],
+          recommendCourses: []
+        })
+        let arr1 = [];
+        let arr2 = [];
+        let arr3 = [];
+        res.data.courses.forEach(e => {
+          // 0精选热门课程；1名师进修课程；2热门推荐课程
+          switch (e.type) {
+            case 0:
+                arr1.push(e);
+              break;
+            case 1:
+                arr2.push(e);
+              break;
+            case 2:
+                arr3.push(e);
+              break;
+            default:
+              break;
+          }
+        });
+        that.setData({
+          recommendCourse: res.data.courses,
+          hotCourses: arr1,
+          teacherCourses: arr2,
+          recommendCourses: arr3
+        });
+      }
+    });
+
+    // 请求门店
+    request.send({
+      url: '/shops',
+      data: {},
+      success: res => {
+        that.setData({
+          venues: res.data.shops
+        });
+      }
+    });
+
+
+    // wx.setTabBarBadge({
+    //   index: 3,
+    //   text: '1'
+    // });
+    // wx.showLoading({
+    //   title: '加载中',
+    // })
+
+    // setTimeout(function () {
+    //   wx.hideLoading()
+    //   wx.hideNavigationBarLoading();
+    // }, 2000)
+    // wx.showNavigationBarLoading();
+  },
+
+  // 用户名变化
+  onNameChange(e) {
+    this.setData({
+      username: e.detail
     })
+  },
+
+  // 手机号码变化
+  onPhoneChange(e) {
+    this.setData({
+      phoneNumber: e.detail
+    })
+  },
+
+  // 输入内容变化
+  onMessageChange(e) {
+    this.setData({
+      message: e.detail
+    })
+  },
+
+  /**
+   * 提交留言
+   */
+  submitAppointment() {
+    if (this.data.username === '') {
+      wx.showToast({
+        title: '请输入您的姓名',
+        icon: 'none',
+        duration: 1500,
+        mask: true
+      });
+      return;
+    }
+
+    if (this.data.phoneNumber === '') {
+      wx.showToast({
+        title: '请输入您的联系方式',
+        icon: 'none',
+        duration: 1500,
+        mask: true
+      });
+      return;
+    }
+
+    let that = this;
+
+    // 请求轮播图
+    request.send({
+      url: '/submitAppointment',
+      data: {
+        name: that.data.username,
+        phone: that.data.phoneNumber,
+        message: that.data.message
+      },
+      success: res => {
+        if (res.data.code !== 0) {
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'none',
+            duration: 1500,
+            mask: true
+          });
+          return;
+        }
+        this.setData({
+          username: '',
+          phoneNumber: '',
+          message: ''
+        })
+        wx.showToast({
+          title: '预约成功',
+          duration: 1500
+        });
+      }
+    });
   },
 
   /**

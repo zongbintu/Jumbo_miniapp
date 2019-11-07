@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/shopcart/shopcart",
+    "pages/product/product",
     "pages/me/balance/balance_detail/balance_detail",
     "pages/me/balance/my_balance/my_balance",
     "pages/me/me",
@@ -22,8 +24,7 @@
     "selectedColor": "#0fcbca",
     "borderStyle": "white",
     "backgroundColor": "#FFFFFF",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/home/home",
         "iconPath": "images/ic_home.png",
         "selectedIconPath": "images/ic_home_HL.png",
@@ -69,6 +70,9 @@
     "van-button": "vant-weapp/button/index",
     "van-grid": "vant-weapp/grid/index",
     "van-grid-item": "vant-weapp/grid-item/index",
-    "van-divider": "vant-weapp/divider/index"
+    "van-divider": "vant-weapp/divider/index",
+    "van-goods-action": "vant-weapp/goods-action/index",
+    "van-goods-action-icon": "vant-weapp/goods-action-icon/index",
+    "van-goods-action-button": "vant-weapp/goods-action-button/index"
   }
 }
