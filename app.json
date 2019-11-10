@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/home/home",
-    "pages/shopcart/shopcart",
     "pages/product/product",
+    "pages/home/home",
+    "pages/customed/customed",
+    "pages/shopcart/shopcart",
     "pages/me/balance/balance_detail/balance_detail",
     "pages/me/balance/my_balance/my_balance",
     "pages/me/me",

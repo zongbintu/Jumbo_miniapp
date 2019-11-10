@@ -44,6 +44,10 @@ swiper-item image {
   background-color: gainsboro;
   text-align: center;
 }
+
+.article {
+  margin: 30rpx;
+}
 /* .detail-nav {
   display: flex;
   flex-direction: row;

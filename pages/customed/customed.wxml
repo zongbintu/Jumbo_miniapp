@@ -1,0 +1,8 @@
+<!-- 自定义页面 -->
+<import src="../../utils/wxParse/wxParse.wxml" />
+<!-- 富文本 -->
+<view class="article" hover-class="none" hover-stop-propagation="false">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
+<!-- 页脚 -->
+<footer />

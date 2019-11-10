@@ -20,9 +20,9 @@
     <van-notice-bar backgroundColor="#ECF9FF" color="#409DFB" left-icon="volume-o "
                     text="{{notifications[0].title}}"/>
     <image mode="widthFix" src="http://cnd.wgj360.com/Admin/Pic/2019/06/27/201906271657473069.png" />
-    <view class="sign-up">
+    <navigator url="../customed/customed?articleId=3" class="sign-up">
       <button>点击立即报名</button>
-    </view>
+    </navigator>
   </view>
 
   <!-- 精选热门课程 -->
@@ -31,7 +31,7 @@
     <text>精选热门课程</text>
   </view>
   <view class="hot-course">
-    <navigator url="../product/product?id={{item.goodsId}}" class="course_item" wx:for="{{hotCourses}}" wx:key="{{index}}">
+    <navigator url="../product/product?productId={{item.goodsId}}" class="course_item" wx:for="{{hotCourses}}" wx:key="{{index}}">
         <view class="item_top">
           <image class="top_bg" src="{{item.imageUrl}}" mode="widthFix" />
         </view>
@@ -52,7 +52,7 @@
     <text>名师进修课程</text>
   </view>
   <view class="hot-course">
-    <navigator url="../product/product?id={{item.goodsId}}" class="course_item" wx:for="{{teacherCourses}}" wx:key="{{index}}">
+    <navigator url="../product/product?productId={{item.goodsId}}" class="course_item" wx:for="{{teacherCourses}}" wx:key="{{index}}">
         <view class="item_top">
           <image class="top_bg" src="{{item.imageUrl}}" mode="widthFix" />
         </view>
@@ -73,7 +73,7 @@
     <text>热门课程推荐</text>
   </view>
   <view class="recommend-course">
-    <navigator url="../product/product?id={{item.goodsId}}" class="course_item" wx:for="{{recommendCourses}}" wx:key="{{index}}">
+    <navigator url="../product/product?productId={{item.goodsId}}" class="course_item" wx:for="{{recommendCourses}}" wx:key="{{index}}">
         <view class="item_left">
           <image class="top_bg" src="{{item.imageUrl}}" mode="widthFix" />
         </view>

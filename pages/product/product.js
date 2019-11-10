@@ -1,3 +1,6 @@
+let WxParse = require('../../utils/wxParse/wxParse.js');
+import request from "../../utils/request";
+
 Page({
   data: {
     isLike: true,
@@ -18,6 +21,37 @@ Page({
       "http://cnd.wgj360.com/User/j/jingboyujia/21089/Pic/2019/06/24/201906241354109285.jpg",
       "http://cnd.wgj360.com/User/j/jingboyujia/21089/Pic/2019/06/24/201906241354468188.jpg"
     ],
+    // 商品信息
+    product: {}
+  },
+  onLoad: function (options) {
+    let that = this;
+
+    let productId = options.productId;
+    if (productId === null || productId === undefined) {
+      productId = 2;
+    }
+
+    // 请求商品详情
+    request.send({
+      url: '/productDetail/' + productId,
+      data: {},
+      success: res => {
+        if (res.data.code === 0) {
+          that.setData({
+            product: res.data.product
+          });
+          WxParse.wxParse('article', 'html', res.data.product.detail, that, 5);   // 实例化对象
+        } else {
+          wx.showToast({
+            title: '您所请求的内容不见咯~',
+            icon: 'none',
+            duration: 1500,
+            mask: true
+          });
+        }
+      }
+    });
   },
   //预览图片
   previewImage: function (e) {
@@ -25,8 +59,15 @@ Page({
 
     wx.previewImage({
       current: current, // 当前显示图片的http链接  
-      urls: this.data.imgUrls // 需要预览的图片http链接列表  
+      urls: [this.data.product.image] // 需要预览的图片http链接列表  
     })
+  },
+  // 回到主页
+  gotoHome() {
+    wx.switchTab({
+      url: '../home/home'
+    });
+      
   },
   // 收藏
   addLike() {

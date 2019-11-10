@@ -1,0 +1,4 @@
+/* pages/customed/customed.wxss */
+.article {
+    margin: 30rpx;
+}
