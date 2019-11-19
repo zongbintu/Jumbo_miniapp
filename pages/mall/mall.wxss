@@ -1,1 +1,10 @@
 /* pages/mall/mall.wxss */
+.mall {
+    display: flex;
+}
+.class {
+    flex: 1;
+}
+.goods {
+    flex: 3;
+}

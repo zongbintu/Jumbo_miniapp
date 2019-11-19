@@ -1,0 +1,137 @@
+<!--pages/appointment/appointment.wxml-->
+<view class="appointment">
+
+    <!-- 选择日期 -->
+    <view class="time-picker">
+        <view bindtap="changDate" data-date="{{item.bottom}}" class="item" wx:for="{{dates}}" wx:key="index" wx:for-item="item">
+            <text class="week {{currentSelect === item.bottom ? 'active' : ''}}">{{item.top}}</text>
+            <text class="date {{currentSelect === item.bottom ? 'active' : ''}}">{{item.bottom}}</text>
+        </view>
+    </view>
+
+    <!-- 课程 -->
+    <view class="courses">
+        <view class="course">
+            <view class="time">
+                10:30 - 11:30
+            </view>
+            <view class="line">
+                <view class="teacher">
+                    <image src="../../images/default_avator.png" mode="widthFix"  />
+                    <view class="info">
+                        <text class="title">健腹锻炼</text>
+                        <text class="name">教练：Ally</text>
+                    </view>
+                </view>
+                <view class="button">
+                    <text class="text">立即预约</text>
+                </view>
+            </view>
+        </view>
+        <view class="course">
+            <view class="time">
+                10:30 - 11:30
+            </view>
+            <view class="line">
+                <view class="teacher">
+                    <image src="../../images/default_avator.png" mode="widthFix"  />
+                    <view class="info">
+                        <text class="title">健腹锻炼</text>
+                        <text class="name">教练：Ally</text>
+                    </view>
+                </view>
+                <view class="button">
+                    <text class="text">立即预约</text>
+                </view>
+            </view>
+        </view>
+        <view class="course">
+            <view class="time">
+                10:30 - 11:30
+            </view>
+            <view class="line">
+                <view class="teacher">
+                    <image src="../../images/default_avator.png" mode="widthFix"  />
+                    <view class="info">
+                        <text class="title">健腹锻炼</text>
+                        <text class="name">教练：Ally</text>
+                    </view>
+                </view>
+                <view class="button">
+                    <text class="text">立即预约</text>
+                </view>
+            </view>
+        </view>
+        <view class="course">
+            <view class="time">
+                10:30 - 11:30
+            </view>
+            <view class="line">
+                <view class="teacher">
+                    <image src="../../images/default_avator.png" mode="widthFix"  />
+                    <view class="info">
+                        <text class="title">健腹锻炼</text>
+                        <text class="name">教练：Ally</text>
+                    </view>
+                </view>
+                <view class="button">
+                    <text class="text">立即预约</text>
+                </view>
+            </view>
+        </view>
+        <view class="course">
+            <view class="time">
+                10:30 - 11:30
+            </view>
+            <view class="line">
+                <view class="teacher">
+                    <image src="../../images/default_avator.png" mode="widthFix"  />
+                    <view class="info">
+                        <text class="title">健腹锻炼</text>
+                        <text class="name">教练：Ally</text>
+                    </view>
+                </view>
+                <view class="button">
+                    <text class="text">立即预约</text>
+                </view>
+            </view>
+        </view>
+        <view class="course">
+            <view class="time">
+                10:30 - 11:30
+            </view>
+            <view class="line">
+                <view class="teacher">
+                    <image src="../../images/default_avator.png" mode="widthFix"  />
+                    <view class="info">
+                        <text class="title">健腹锻炼</text>
+                        <text class="name">教练：Ally</text>
+                    </view>
+                </view>
+                <view class="button">
+                    <text class="text">立即预约</text>
+                </view>
+            </view>
+        </view>
+        <view class="course">
+            <view class="time">
+                10:30 - 11:30
+            </view>
+            <view class="line">
+                <view class="teacher">
+                    <image src="../../images/default_avator.png" mode="widthFix"  />
+                    <view class="info">
+                        <text class="title">健腹锻炼</text>
+                        <text class="name">教练：Ally</text>
+                    </view>
+                </view>
+                <view class="button">
+                    <text class="text">立即预约</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 页脚 -->
+	<footer />
+
+</view>

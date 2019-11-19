@@ -1,0 +1,39 @@
+<!-- 登录界面 -->
+<view class="login">
+    <!-- 默认logo -->
+    <image class="default-avator align-center" src="../../images/default_avator.png" mode="widthFix" />
+    
+    <!-- 账号 -->
+    <view class="input align-center">
+        <input type="text" placeholder="账号" value="{{username}}" />
+    </view>
+
+    <!-- 密码 -->
+    <view class="input align-center">
+        <input type="password" placeholder="密码" value="{{password}}" />
+    </view>
+
+    <!-- 忘记密码 -->
+    <view class="forget-pwd align-center" bindtap="forgetPwd">
+        忘记密码？
+    </view>
+      
+    <!-- 登录按钮 -->
+    <view class="login-btn align-center" bindtap="login">
+        登录
+    </view>
+
+    <!-- 微信登录 -->
+    <view class="wechat-login align-center">
+        <view class="line" />
+        使用微信登录
+        <view class="line" />
+    </view>
+    <button class="wechat" open-type="getUserInfo" lang="zh_CN" bindtap="wechatLogin" bindgetuserinfo="onGotUserInfo">
+        <!-- 微信logo -->
+        <image src="../../images/wechat.png" mode="widthFix" />
+    </button>
+
+    
+      
+</view>

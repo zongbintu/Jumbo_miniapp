@@ -1,0 +1,57 @@
+<!-- 商品详情页 -->
+<import src="../../utils/wxParse/wxParse.wxml" />
+
+<!-- banner -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <!-- <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+    </swiper-item>
+  </block> -->
+  <swiper-item>
+    <image src="{{product.image}}" data-src="{{item}}" bindtap="previewImage"></image>
+  </swiper-item>
+</swiper>
+<scroll-view scroll-y="true">
+  <view class="detail">
+    <text class="title">{{product.title}}</text>
+    <text class="price">￥{{product.price}}</text>
+  </view>
+  <view class="separate"></view>
+  <!-- sku选择 -->
+  <!-- <text bindtap="toggleDialog">请选择购买数量</text>
+  <view class="separate"></view>
+  <text>商品评价</text>
+  <text class="text-remark">东西还可以，好评~</text>
+  <view class="separate"></view> -->
+  <text style="margin-left:20rpx;">商品详情</text>
+  <!-- 富文本 -->
+  <view class="article" hover-class="none" hover-stop-propagation="false">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+  <!-- 图片列表 -->
+  <!-- <block wx:for-items="{{detailImg}}" wx:key="name">
+    <image class="image_detail" src="{{item}}" />
+  </block> -->
+</scroll-view>
+<van-goods-action>
+  <van-goods-action-icon
+    icon="wap-home-o"
+    text="首页"
+    bind:click="gotoHome"
+  />
+  <van-goods-action-icon
+    icon="cart-o"
+    text="购物车"
+    bind:click="onClickIcon"
+  />
+  <van-goods-action-button
+    text="加入购物车"
+    type="warning"
+    bind:click="onClickButton"
+  />
+  <van-goods-action-button
+    text="立即购买"
+    bind:click="onClickButton"
+  />
+</van-goods-action>

@@ -14,6 +14,21 @@
   vertical-align: text-bottom;
 }
 
+/* 约课 */
+.appointment-course {
+  margin: 30rpx 40rpx 30rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.appointment-course image {
+  width: 100prx;
+  display: inline-block;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 1rpx 5rpx rgb(187, 174, 174);
+}
+
+
 
 /* 优选课程 */
 .recommend_class .class_item {

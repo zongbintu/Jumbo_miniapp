@@ -34,7 +34,7 @@
 		/>
 		<van-grid clickable="true" column-num="5">
 			<van-grid-item icon="send-gift-o" text="待付款" />
-			<van-grid-item icon="free-postage" text="代发货" />
+			<van-grid-item icon="free-postage" text="待发货" />
 			<van-grid-item icon="logistics" text="待收货" />
 			<van-grid-item icon="records" text="待评价" />
 			<van-grid-item icon="after-sale" text="售后" />

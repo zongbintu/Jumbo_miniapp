@@ -1,0 +1,88 @@
+/* pages/login/login.wxss */
+/* 登录界面 */
+.login {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* 居中对其 */
+.align-center {
+    margin: 0 auto;
+}
+
+/* 默认头像 */
+.default-avator {
+    width: 200rpx;
+}
+
+/* 账号/密码 */
+.input {
+    margin-top: 50rpx;
+    border-bottom: 1rpx #cccc solid;
+    width: 650rpx;
+}
+
+.input input {
+    padding: 10rpx;
+}
+
+/* 忘记密码 */
+.forget-pwd {
+    margin-top: 20rpx;
+    font-size: 0.9rem;
+    padding: 10rpx;
+    text-align: right;
+    width: 630rpx;
+}
+
+/* 登录按钮 */
+.login-btn {
+    color: white;
+    background-color: #10cac9;
+    width: 590rpx;
+    border-radius: 10rpx;
+    font-size: 1.2rem;
+    padding: 30rpx;
+    text-align: center;
+    box-shadow: 1rpx 1rpx 5rpx #cccc;
+    margin-top: 100rpx;
+}
+
+/* 使用微信登录 */
+.wechat-login {
+    align-items: center;
+    width: 650rpx;
+    margin-top: 100rpx;
+    color: #666;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 微信登录 */
+.wechat-login .line {
+    width: 200rpx;
+    display: inline-block;
+    height: 2rpx;
+    background: #cccc;
+}
+
+.wechat {
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: 0rpx;
+    margin: 30rpx auto;
+    width: 90rpx;
+}
+
+.wechat::after {
+    border: none;
+}
+
+.wechat image {
+    width: 90rpx;
+}

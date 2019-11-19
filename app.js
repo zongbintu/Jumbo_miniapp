@@ -34,6 +34,10 @@ App({
     })
   },
   globalData: {
-    userInfo: null
-  }
+    userInfo: {
+      phoneNumber: "18896807726",
+      username: "赵冬晋"
+    }
+  },
+  request: require('./utils/request')
 })

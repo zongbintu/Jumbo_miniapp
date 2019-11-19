@@ -8,7 +8,7 @@
 }
 
 /* 富文本 */
-.article1, article2 {
+.article1, .article2 {
     margin: 30rpx;
 }
 
