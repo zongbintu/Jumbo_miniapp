@@ -282,13 +282,6 @@ Page({
     })
   },
 
-  // 手机号码变化
-  onPhoneChange(e) {
-    this.setData({
-      phoneNumber: e.detail
-    })
-  },
-
   // 输入内容变化
   onMessageChange(e) {
     this.setData({
@@ -296,6 +289,13 @@ Page({
     })
   },
 
+  // 手机号码变化
+  onPhoneChange(e) {
+    this.setData({
+      phoneNumber: e.detail
+    })
+  },
+  
   /**
    * 提交留言
    */
@@ -322,7 +322,7 @@ Page({
 
     let that = this;
 
-    // 请求轮播图
+    // 发送预约
     request.send({
       url: '/submitAppointment',
       data: {

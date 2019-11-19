@@ -30,7 +30,7 @@
       <button>点击立即报名</button>
     </navigator>
   </view>
-  
+
   <!-- 精选热门课程 -->
   <view class="block_title" wx:if="{{hotCourses.length > 0}}">
     <image mode="widthFix" src="../../images/quote.png" />
@@ -136,7 +136,6 @@
     <view class="submi-btn">
       <button bindtap="submitAppointment">提交预约</button>
     </view>
-
 
   </view>
 

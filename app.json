@@ -1,13 +1,13 @@
 {
   "pages": [
-    "pages/customed/customed",
-    "pages/home/home",
-    "pages/product/product",
-    "pages/appointment/appointment",
-    "pages/mall/mall",
-    "pages/login/login",
-    
     "pages/shopcart/shopcart",
+    "pages/login/login",
+    "pages/mall/mall",
+    "pages/appointment/appointment",
+    "pages/product/product",
+    "pages/home/home",
+    "pages/customed/customed",
+    
     "pages/me/balance/balance_detail/balance_detail",
     "pages/me/balance/my_balance/my_balance",
     "pages/me/me",
