@@ -1,19 +1,24 @@
 {
   "pages": [
-    "pages/shopcart/shopcart",
-    "pages/login/login",
-    "pages/mall/mall",
-    "pages/appointment/appointment",
-    "pages/product/product",
     "pages/home/home",
+    "pages/shopcart/submit/submit",
+    "pages/me/address/address",
+    "pages/me/add_address/add_address",
+    "pages/shopcart/shopcart",
+    "pages/mall/mall",
+    "pages/venue/venue",
+    "pages/store/store",
+    "pages/appointment/detail/detail",
+    "pages/appointment/appointment",
+    "pages/login/login",
+    "pages/class/class",
+    "pages/product/product",
     "pages/customed/customed",
     
     "pages/me/balance/balance_detail/balance_detail",
     "pages/me/balance/my_balance/my_balance",
     "pages/me/me",
     "pages/school/school",
-    "pages/venue/venue",
-    "pages/store/store",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -47,7 +52,7 @@
         "text": "学院"
       },
       {
-        "pagePath": "pages/mall/mall",
+        "pagePath": "pages/class/class",
         "iconPath": "images/ic_mall.png",
         "selectedIconPath": "images/ic_mall_HL.png",
         "text": "商城"

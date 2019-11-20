@@ -1,0 +1,49 @@
+<!-- 最外层视图pages -->
+<view class="pages">
+ 
+  <view wx:if="{{hasList}}">
+  <!-- 编辑 -->
+  <view class='edit' bindtap="chooseAddress">
+    <view class="receiver_name">收货人：dj</view>
+    <view class="receiver_phone">电话：18896807726</view>
+    <view class="receiver_address">收货地址：拉萨角度来看</view>
+  <van-icon name="arrow" />
+  </view>
+      <!-- 列表 -->
+      <view class="list" wx:for="{{list}}" wx:key="{{index}}">
+        <!-- 列表标题 -->
+        <text class="list_name">{{item.title}}</text>
+        <!-- 列表商品图片 -->
+        <image class="list_img" src="{{item.image}}"></image>
+        <!-- 规格 -->
+        <!-- <text class="cart_g_name">规格 : {{item.pro_name}}</text> -->
+        <!-- 收藏 -->
+        <!-- <label class='collert' bindtap='btn_collert'>
+          <image class='collert_img'src='../../images/shop_car/collert.png'></image> 收藏</label> -->
+        <!-- 价格 -->
+        <text class="list_price">￥{{item.price}}</text>
+        <!-- 商品数量加减  style='display:{{show_edit}}'-->
+        <view style='display:{{show_edit}}'>
+        <view class="carts-num">
+          <!-- 文本框值 -->
+          <label class="view_text_center"  bindinput='input_num' data-index="{{index}}">x {{item.num}}</label>
+        </view></view>
+        
+        <!-- 删除 -->
+        <!-- <text class="list_del" bindtap="deleteList" data-index="{{index}}">×</text> -->
+    </view>
+<!-- 固定底部 -->
+    <view class="cont_bot">
+      <!-- 合计金额 -->
+      <lable class="count_price">合计：<text>￥{{totalPrice}}</text></lable>
+      <!-- 提交订单 -->
+      <label class='submit' bindtap='btn_submit_order'>去付款</label>
+      </view>
+     
+  </view>
+  <view wx:else>
+    <view class="list_none">暂时没有商品哦~</view>
+  </view>
+ 
+</view>
+ 

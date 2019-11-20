@@ -26,12 +26,12 @@
     color: #111;
 }
 .time-picker .item text.active {
- color: #00fafa;
+ color: #f8345f;
 }
 .time-picker .item .date.active {
     border-radius: 100%;
     color: white;
-    background: #00fafa;
+    background: #f8345f;
 }
 
 /* 课程 */
@@ -39,10 +39,12 @@
     margin: 50rpx 30rpx;
 }
 .course .time {
-    margin: 10rpx;
+    margin-top: 20rpx;
+    font-size: 0.9rem;
     color: #888;
 }
 .course .line {
+    margin-bottom: 10rpx;
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -66,7 +68,7 @@
 }
 .course .line .teacher .info .name {
     color: #666;
-    size: 0.9rem;
+    font-size: 0.8rem;
 }
 .course .line .button {
     display: flex;
@@ -74,8 +76,9 @@
     flex-direction: column;
 }
 .course .line .button .text {
-    padding: 20rpx 30rpx;
-    background: #00fafa;
+    font-size: 0.9rem;
+    padding: 15rpx 25rpx;
+    background: #f8345f;
     color: white;
     border-radius: 10rpx;
 }

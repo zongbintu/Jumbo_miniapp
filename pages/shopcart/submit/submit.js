@@ -351,6 +351,11 @@ Page({
       totalPrice: total.toFixed(2)
     });
   },
+  // 选择收货地址
+  chooseAddress() {
+    wx.navigateTo({ url: '../../me/address/address' });
+  },
+
   // 下拉刷新
   // onPullDownRefresh: function () {
   //   // 显示顶部刷新图标  

@@ -1,3 +1,5 @@
+import request from "../../utils/request";
+
 // pages/store/store.js
 Page({
 
@@ -41,7 +43,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let that = this;
+    // 请求门店
+    request.send({
+      url: '/shops',
+      data: {},
+      success: res => {
+        that.setData({
+          stores: res.data.shops
+        });
+      }
+    });
   },
 
   /**

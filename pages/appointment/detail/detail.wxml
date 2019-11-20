@@ -1,5 +1,5 @@
 <!-- 商品详情页 -->
-<import src="../../utils/wxParse/wxParse.wxml" />
+<import src="../../../utils/wxParse/wxParse.wxml" />
 
 <!-- banner -->
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
@@ -24,7 +24,7 @@
   <text>商品评价</text>
   <text class="text-remark">东西还可以，好评~</text>
   <view class="separate"></view> -->
-  <text style="margin:20rpx 0 0 20rpx; border-left:red 10rpx solid; padding-left:20rpx; color:red;">商品详情</text>
+  <text style="margin:20rpx 0 0 20rpx; border-left:red 10rpx solid; padding-left:20rpx; color:red;">课程详情</text>
   <!-- 富文本 -->
   <view class="article" hover-class="none" hover-stop-propagation="false">
       <template is="wxParse" data="{{wxParseData:article.nodes}}" />
@@ -35,23 +35,8 @@
   </block> -->
 </scroll-view>
 <van-goods-action>
-  <van-goods-action-icon
-    icon="wap-home-o"
-    text="首页"
-    bind:click="gotoHome"
-  />
-  <van-goods-action-icon
-    icon="cart-o"
-    text="购物车"
-    bind:click="onClickIcon"
-  />
   <van-goods-action-button
-    text="加入购物车"
-    type="warning"
-    bind:click="onClickButton"
-  />
-  <van-goods-action-button
-    text="立即购买"
+    text="立即预约"
     bind:click="onClickButton"
   />
 </van-goods-action>

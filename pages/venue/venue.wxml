@@ -4,8 +4,8 @@
 	<view class="store" wx:for="{{stores}}" wx:key="{{index}}" wx:for-item="i">
 		<view class="store_title">{{i.title}}</view>
 		<swiper class="store_show" indicator-dots autoplay indicator-active-color="#fff">
-			<swiper-item class="show_item" wx:for="{{i.storeShow}}" wx:key="{{index}}">
-				<image src='{{item}}' mode="widthFit"></image>
+			<swiper-item class="show_item">
+				<image src='{{i.imgUrl}}' mode="widthFit"></image>
 			</swiper-item>
 		</swiper>
 	</view>

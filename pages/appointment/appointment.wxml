@@ -16,13 +16,13 @@
                 10:30 - 11:30
             </view>
             <view class="line">
-                <view class="teacher">
+                <navigator open-type="navigate" url="./detail/detail" hover-class="none" class="teacher">
                     <image src="../../images/default_avator.png" mode="widthFix"  />
                     <view class="info">
                         <text class="title">健腹锻炼</text>
                         <text class="name">教练：Ally</text>
                     </view>
-                </view>
+                </navigator>
                 <view class="button">
                     <text class="text">立即预约</text>
                 </view>
@@ -33,13 +33,13 @@
                 10:30 - 11:30
             </view>
             <view class="line">
-                <view class="teacher">
+                <navigator open-type="navigate" url="./detail/detail" hover-class="none" class="teacher">
                     <image src="../../images/default_avator.png" mode="widthFix"  />
                     <view class="info">
                         <text class="title">健腹锻炼</text>
                         <text class="name">教练：Ally</text>
                     </view>
-                </view>
+                </navigator>
                 <view class="button">
                     <text class="text">立即预约</text>
                 </view>
@@ -50,81 +50,13 @@
                 10:30 - 11:30
             </view>
             <view class="line">
-                <view class="teacher">
+                <navigator open-type="navigate" url="./detail/detail" hover-class="none" class="teacher">
                     <image src="../../images/default_avator.png" mode="widthFix"  />
                     <view class="info">
                         <text class="title">健腹锻炼</text>
                         <text class="name">教练：Ally</text>
                     </view>
-                </view>
-                <view class="button">
-                    <text class="text">立即预约</text>
-                </view>
-            </view>
-        </view>
-        <view class="course">
-            <view class="time">
-                10:30 - 11:30
-            </view>
-            <view class="line">
-                <view class="teacher">
-                    <image src="../../images/default_avator.png" mode="widthFix"  />
-                    <view class="info">
-                        <text class="title">健腹锻炼</text>
-                        <text class="name">教练：Ally</text>
-                    </view>
-                </view>
-                <view class="button">
-                    <text class="text">立即预约</text>
-                </view>
-            </view>
-        </view>
-        <view class="course">
-            <view class="time">
-                10:30 - 11:30
-            </view>
-            <view class="line">
-                <view class="teacher">
-                    <image src="../../images/default_avator.png" mode="widthFix"  />
-                    <view class="info">
-                        <text class="title">健腹锻炼</text>
-                        <text class="name">教练：Ally</text>
-                    </view>
-                </view>
-                <view class="button">
-                    <text class="text">立即预约</text>
-                </view>
-            </view>
-        </view>
-        <view class="course">
-            <view class="time">
-                10:30 - 11:30
-            </view>
-            <view class="line">
-                <view class="teacher">
-                    <image src="../../images/default_avator.png" mode="widthFix"  />
-                    <view class="info">
-                        <text class="title">健腹锻炼</text>
-                        <text class="name">教练：Ally</text>
-                    </view>
-                </view>
-                <view class="button">
-                    <text class="text">立即预约</text>
-                </view>
-            </view>
-        </view>
-        <view class="course">
-            <view class="time">
-                10:30 - 11:30
-            </view>
-            <view class="line">
-                <view class="teacher">
-                    <image src="../../images/default_avator.png" mode="widthFix"  />
-                    <view class="info">
-                        <text class="title">健腹锻炼</text>
-                        <text class="name">教练：Ally</text>
-                    </view>
-                </view>
+                </navigator>
                 <view class="button">
                     <text class="text">立即预约</text>
                 </view>
