@@ -1,3 +1,4 @@
+import request from "../../utils/request";
 // pages/appointment/appointment.js
 /**
  *对Date的扩展，将 Date 转化为指定格式的String
@@ -9,17 +10,17 @@
  */
 Date.prototype.format = function (fmt) {
   var o = {
-      "M+": this.getMonth() + 1, //月份
-      "d+": this.getDate(), //日
-      "h+": this.getHours(), //小时
-      "m+": this.getMinutes(), //分
-      "s+": this.getSeconds(), //秒
-      "q+": Math.floor((this.getMonth() + 3) / 3), //季度
-      "S": this.getMilliseconds() //毫秒
+    "M+": this.getMonth() + 1, //月份
+    "d+": this.getDate(), //日
+    "h+": this.getHours(), //小时
+    "m+": this.getMinutes(), //分
+    "s+": this.getSeconds(), //秒
+    "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+    "S": this.getMilliseconds() //毫秒
   };
   if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
   for (var k in o)
-      if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
   return fmt;
 }
 Page({
@@ -31,7 +32,21 @@ Page({
     // 一周日期
     dates: [],
     // 当前选择的日期
-    currentSelect: 0
+    currentSelect: 0,
+    // 课程数据
+    courses: [{
+      "courseId": 6,
+      "courseName": "课程1",
+      "startTime": "08:00",
+      "endTime": "09:30",
+      "coachName": "Nikl"
+    },{
+      "courseId": 7,
+      "courseName": "课程2",
+      "startTime": "10:00",
+      "endTime": "12:30",
+      "coachName": null
+    },]
   },
 
   /**
@@ -51,7 +66,67 @@ Page({
     }
     // 计算日期
     this.initDate(this);
-    
+
+    this.updateCourses(this.data.dates[0].date);
+
+  },
+
+  /**
+   * 更新课程信息
+   * @param {*} date 
+   */
+  updateCourses(date) {
+    let that = this;
+    // 请求课程
+    request.send({
+      url: '/getAppointmentCourse',
+      data: {
+        date: date
+      },
+      success: res => {
+        if (res.data.code === 0) {
+          that.setData({
+            courses: res.data.courses
+          });
+        } else {
+          wx.showToast({
+            title: '暂时没有课程',
+            icon: 'none'
+          });
+          that.setData({
+            courses: []
+          });
+        }
+      }
+    });
+  },
+
+  /**
+   * 进行约课
+   */
+  goAppointment(event) {
+    let courseId = event.currentTarget.dataset.id;
+    let memberId = 9;
+    // 发送请求
+    request.send({
+      url: '/submitAppointment',
+      data: {
+        courseId,
+        memberId
+      },
+      success: res => {
+        if (res.data.code === 0) {
+          wx.showToast({
+            title: res.data.msg
+          });
+        } else {
+          wx.showToast({
+            title: '请稍后重试',
+            icon: 'none'
+          });
+        }
+      }
+    });
   },
 
   /**
@@ -60,7 +135,7 @@ Page({
   initDate: (that) => {
     let now = new Date();
     let arr = [];
-    let weekDays = ['一', '二', '三', '四', '五', '六', '日'];
+    let weekDays = ['日', '一', '二', '三', '四', '五', '六'];
     for (let i = 0; i < 7; ++i) {
       let tempTime = new Date();
       tempTime.setDate(now.getDate() + i);
@@ -83,10 +158,11 @@ Page({
   /**
    * 切换日期
    */
-  changDate: function(e) {
+  changDate: function (e) {
     this.setData({
-      currentSelect: e.currentTarget.dataset.date
-    })
+      currentSelect: e.currentTarget.dataset.day
+    });
+    this.updateCourses(e.currentTarget.dataset.date);
   },
 
   /**

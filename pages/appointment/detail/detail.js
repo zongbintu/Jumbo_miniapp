@@ -27,21 +27,25 @@ Page({
   onLoad: function (options) {
     let that = this;
 
-    let productId = options.productId;
-    if (productId === null || productId === undefined) {
-      productId = 8;
+    let courseId = options.courseId;
+    if (courseId === null || courseId === undefined) {
+      courseId = 8;
     }
 
     // 请求商品详情
     request.send({
-      url: '/productDetail/' + productId,
+      url: '/getCourseDetail/' + courseId,
       data: {},
       success: res => {
         if (res.data.code === 0) {
+          if (res.data.course.image === null || res.data.course.image === undefined) {
+            // TODO 假图片
+            res.data.course.image="http://m.yoga00001.com/images/bxymn1.png"
+          }
           that.setData({
-            product: res.data.product
+            product: res.data.course
           });
-          WxParse.wxParse('article', 'html', res.data.product.detail, that, 5);   // 实例化对象
+          WxParse.wxParse('article', 'html', res.data.course.courseDetail, that, 5);   // 实例化对象
         } else {
           wx.showToast({
             title: '您所请求的内容不见咯~',
@@ -61,6 +65,33 @@ Page({
       current: current, // 当前显示图片的http链接  
       urls: [this.data.product.image] // 需要预览的图片http链接列表  
     })
+  },
+  /**
+   * 进行约课
+   */
+  goAppointment(event) {
+    let courseId = event.currentTarget.dataset.id;
+    let memberId = 9;
+    // 发送请求
+    request.send({
+      url: '/submitAppointment',
+      data: {
+        courseId,
+        memberId
+      },
+      success: res => {
+        if (res.data.code === 0) {
+          wx.showToast({
+            title: res.data.msg
+          });
+        } else {
+          wx.showToast({
+            title: '请稍后重试',
+            icon: 'none'
+          });
+        }
+      }
+    });
   },
   // 回到主页
   gotoHome() {

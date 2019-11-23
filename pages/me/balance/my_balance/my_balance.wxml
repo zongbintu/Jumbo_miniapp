@@ -7,7 +7,12 @@
     </view>
 
     <!-- 查看记录 -->
-    <van-cell class="goto_detail" title="余额明细" is-link />
+    <van-cell 
+    class="goto_detail" 
+    title="余额明细" 
+    is-link 
+    link-type="navigateTo"
+    url="/pages/me/balance/balance_detail/balance_detail" />
 
     <!-- 页脚 -->
 	<footer/>

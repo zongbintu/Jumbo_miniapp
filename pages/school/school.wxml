@@ -4,7 +4,7 @@
 	<!-- 视频 -->
 	<video
 	 class="intro_video"
-	 src="../../assets/jumbo_intro.mp4"
+	 src="http://qiniu.djzhao.cn/jumbo/video/jumbo_intro.mp4"
 	 autoplay="{{false}}"
 	 object-fit="fill"
 	/>

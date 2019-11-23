@@ -1,2 +1,69 @@
-<!--pages/mall/mall.wxml-->
-<text>pages/mall/mall.wxml</text>
+<view class="home">
+
+    <!-- 首页轮播图：优选课程 -->
+    <swiper class="recommend_class" indicator-dots autoplay indicator-active-color="#fff">
+        <swiper-item class="class_item" wx:for="{{classBanner}}" wx:key="{{index}}">
+            <image src='{{item.imgUrl}}' mode="widthFix"></image>
+        </swiper-item>
+    </swiper>
+
+    <!-- 热门分类 -->
+    <view class="activity">
+        <navigator url="{{item.url}}" hover-class="none" class="activity_item" wx:for="{{activity}}" wx:key="{{index}}">
+            <image src="{{item.img}}" mode="widthFix" />
+            <text>{{item.title}}</text>
+        </navigator>
+    </view>
+
+    <!-- 分块 -->
+    <hr class="devider" />
+
+    <!-- 推荐商品 -->
+    <view class="block_title">
+        <image mode="widthFix" src="../../images/quote.png" />
+        <text>静波推荐</text>
+    </view>
+    <scroll-view class='scrollContainer' scroll-x>
+        <view class='itemBg' wx:for="{{recommendGoods}}" wx:key="index">
+            <navigator url="/pages/class/class" class='recommandItemBtn' form-type='submit' hover-class='none'>
+                <image class='recommandItemImg' src="{{item.img}}"></image>
+                <view class='recommandItemText'>{{item.title}}</view>
+            </navigator>
+        </view>
+    </scroll-view>
+
+    <!-- 分块 -->
+    <hr class="devider" />
+
+    <!-- 精选单品 -->
+    <view class="block_title">
+        <image mode="widthFix" src="../../images/quote.png" />
+        <text>精选单品</text>
+    </view>
+    <scroll-view class='scroll_x' scroll-x>
+        <navigator class="product" wx:for="{{recommendGoods}}" wx:key="index">
+            <image class='image' src="{{item.img}}" mode="widthFix"></image>
+            <view class='title'>{{item.title}}</view>
+            <view class='price'>￥ {{item.price}}</view>
+        </navigator>
+    </scroll-view>
+
+    <!-- 分块 -->
+    <hr class="devider" />
+
+    <!-- 最新上架 -->
+    <view class="block_title">
+        <image mode="widthFix" src="../../images/quote.png" />
+        <text>最新上架</text>
+    </view>
+    <scroll-view class='scroll_x' scroll-x>
+        <navigator class="product" wx:for="{{recommendGoods}}" wx:key="index">
+            <image class='image' src="{{item.img}}" mode="widthFix"></image>
+            <view class='title'>{{item.title}}</view>
+            <view class='price'>￥ {{item.price}}</view>
+        </navigator>
+    </scroll-view>
+
+    <!-- 页脚 -->
+    <footer />
+</view>

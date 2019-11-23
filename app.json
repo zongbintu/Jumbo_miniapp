@@ -1,18 +1,18 @@
 {
   "pages": [
+    "pages/login/login",
+    "pages/appointment/appointment",
+    "pages/mall/mall",
+    "pages/product/product",
     "pages/home/home",
     "pages/shopcart/submit/submit",
     "pages/me/address/address",
     "pages/me/add_address/add_address",
     "pages/shopcart/shopcart",
-    "pages/mall/mall",
     "pages/venue/venue",
     "pages/store/store",
     "pages/appointment/detail/detail",
-    "pages/appointment/appointment",
-    "pages/login/login",
     "pages/class/class",
-    "pages/product/product",
     "pages/customed/customed",
     
     "pages/me/balance/balance_detail/balance_detail",
@@ -52,7 +52,7 @@
         "text": "学院"
       },
       {
-        "pagePath": "pages/class/class",
+        "pagePath": "pages/mall/mall",
         "iconPath": "images/ic_mall.png",
         "selectedIconPath": "images/ic_mall_HL.png",
         "text": "商城"

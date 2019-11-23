@@ -50,11 +50,13 @@
     align-content: center;
 }
 .course .line .teacher {
+    margin-top: 10rpx;
     display: flex;
     align-content: center;
 }
 .course .line .teacher image {
     width: 150rpx;
+    border-radius: 50%;
 }
 .course .line .teacher .info {
     display: flex;

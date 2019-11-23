@@ -14,7 +14,7 @@
 </swiper>
 <scroll-view scroll-y="true">
   <view class="detail">
-    <text class="title">{{product.title}}</text>
+    <text class="title">{{product.courseName}}</text>
     <text class="price">￥{{product.price}}</text>
   </view>
   <view class="separate"></view>
@@ -37,6 +37,7 @@
 <van-goods-action>
   <van-goods-action-button
     text="立即预约"
-    bind:click="onClickButton"
+    data-id="{{product.id}}" 
+    bind:click="goAppointment"
   />
 </van-goods-action>

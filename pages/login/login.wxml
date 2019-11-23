@@ -1,7 +1,7 @@
 <!-- 登录界面 -->
 <view class="login">
     <!-- 默认logo -->
-    <image class="default-avator align-center" src="../../images/default_avator.png" mode="widthFix" />
+    <image class="default-avator align-center" src="http://pkt.zoosnet.net/site/74153360/chat_left_img_share_cn.png" mode="widthFix" />
     
     <!-- 账号 -->
     <view class="input align-center">

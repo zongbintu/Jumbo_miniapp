@@ -3,7 +3,7 @@
 
     <!-- 选择日期 -->
     <view class="time-picker">
-        <view bindtap="changDate" data-date="{{item.bottom}}" class="item" wx:for="{{dates}}" wx:key="index" wx:for-item="item">
+        <view bindtap="changDate" data-day="{{item.bottom}}" data-date="{{item.date}}" class="item" wx:for="{{dates}}" wx:key="index" wx:for-item="item">
             <text class="week {{currentSelect === item.bottom ? 'active' : ''}}">{{item.top}}</text>
             <text class="date {{currentSelect === item.bottom ? 'active' : ''}}">{{item.bottom}}</text>
         </view>
@@ -11,54 +11,21 @@
 
     <!-- 课程 -->
     <view class="courses">
-        <view class="course">
+        <view class="course" wx:for="{{courses}}" wx:key="index">
             <view class="time">
-                10:30 - 11:30
+                {{item.startTime}} - {{item.endTime}}
             </view>
             <view class="line">
-                <navigator open-type="navigate" url="./detail/detail" hover-class="none" class="teacher">
-                    <image src="../../images/default_avator.png" mode="widthFix"  />
+                <navigator open-type="navigate" url="./detail/detail?courseId={{item.courseId}}" hover-class="none" class="teacher">
+                    <image src="http://pkt.zoosnet.net/site/74153360/chat_left_img_share_cn.png" mode="widthFix"  />
                     <view class="info">
-                        <text class="title">健腹锻炼</text>
-                        <text class="name">教练：Ally</text>
+                        <text class="title">{{item.courseName}}</text>
+                        <text wx:if="{{item.coachName === null}}" class="name">教练：动态分配</text>
+                        <text wx:else class="name">教练：{{item.coachName}}</text>
                     </view>
                 </navigator>
                 <view class="button">
-                    <text class="text">立即预约</text>
-                </view>
-            </view>
-        </view>
-        <view class="course">
-            <view class="time">
-                10:30 - 11:30
-            </view>
-            <view class="line">
-                <navigator open-type="navigate" url="./detail/detail" hover-class="none" class="teacher">
-                    <image src="../../images/default_avator.png" mode="widthFix"  />
-                    <view class="info">
-                        <text class="title">健腹锻炼</text>
-                        <text class="name">教练：Ally</text>
-                    </view>
-                </navigator>
-                <view class="button">
-                    <text class="text">立即预约</text>
-                </view>
-            </view>
-        </view>
-        <view class="course">
-            <view class="time">
-                10:30 - 11:30
-            </view>
-            <view class="line">
-                <navigator open-type="navigate" url="./detail/detail" hover-class="none" class="teacher">
-                    <image src="../../images/default_avator.png" mode="widthFix"  />
-                    <view class="info">
-                        <text class="title">健腹锻炼</text>
-                        <text class="name">教练：Ally</text>
-                    </view>
-                </navigator>
-                <view class="button">
-                    <text class="text">立即预约</text>
+                    <text class="text" data-id="{{item.courseId}}" bindtap="goAppointment">立即预约</text>
                 </view>
             </view>
         </view>

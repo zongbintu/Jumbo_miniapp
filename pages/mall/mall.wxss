@@ -1,1 +1,167 @@
-/* pages/mall/mall.wxss */
+.home {
+    background-color: #fff;
+}
+
+
+/* 模块标题 */
+.block_title {
+    font-size: 0.8rem;
+    color: #333;
+    margin: 30rpx 0 15rpx 10rpx;
+}
+
+.block_title image {
+    width: 50rpx;
+    border-radius: 25rpx;
+    vertical-align: text-bottom;
+}
+
+
+/* 优选课程 */
+.recommend_class .class_item {
+    width: 100%;
+}
+
+.recommend_class .class_item image {
+    width: 100%;
+}
+
+
+/* 热门分类 */
+.activity {
+    margin: 10rpx 0;
+    padding: 0 10rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.activity .activity_item {
+    width: 180rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.activity_item image {
+    margin-top: 20rpx;
+    width: 50%;
+}
+
+.activity_item text {
+    color: #aaa;
+    font-weight: 400;
+    font-size: 0.7rem;
+    margin: 15rpx 0 15rpx 0;
+}
+
+/* 分块 */
+.devider {
+    display: block;
+    height: 20rpx;
+    background: #eee;
+}
+
+/* 推荐商品 */
+.recommend_goods {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.scrollContainer {
+    width: 100%;
+    height: 234rpx;
+    border-top: 1rpx solid #EF639F;
+    border-bottom: 1rpx solid #EF639F;
+    white-space: nowrap;
+    margin-bottom: 20rpx;
+}
+
+.itemBg {
+    display: inline-block;
+    margin-left: 30rpx;
+    width: 140rpx;
+    height: 234rpx;
+}
+
+.recommandItemBtn {
+    /*其余属性一致，此处略写，只改margin-left*/
+    margin-left: 0;
+}
+
+.recommandItemBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30rpx;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 140rpx;
+    height: 234rpx;
+    line-height: 1;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.recommandItemBtn::after {
+    display: none;
+}
+
+.recommandItemImg {
+    width: 130rpx;
+    height: 130rpx;
+    margin-top: 30rpx;
+    border-radius: 10rpx;
+}
+
+.recommandItemText {
+    color: black;
+    font-size: 24rpx;
+    margin: 20rpx 0 30rpx 0;
+    text-align: center;
+    width: 140rpx;
+    height: 24rpx;
+    line-height: 24rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 精选单品 */
+
+.scroll_x {
+    width: 100%;
+    white-space: nowrap;
+    padding: 10rpx 0;
+    height: auto;
+    border-top: #EF639F;
+    border-bottom: #EF639F;
+}
+
+.product {
+    width: 220rpx;
+    display: inline-block;
+    margin: 10rpx 20rpx;
+}
+
+.product image {
+    width: 100%;
+}
+
+.product .title {
+    margin: 10rpx 0;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product .price {
+    width: 100%;
+    color: red;
+    size: 0.8rem;
+    margin: 10rpx 0;
+}

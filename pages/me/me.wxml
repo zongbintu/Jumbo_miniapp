@@ -5,7 +5,7 @@
 		<view class="user">
 			<image
 			 class="avator"
-			 src="../../images/default_avator.png"
+			 src="http://pkt.zoosnet.net/site/74153360/chat_left_img_share_cn.png"
 			 mode="widthFix"
 			 lazy-load="false"
 			/>
@@ -44,6 +44,8 @@
 		 icon="paid"
 		 size="large"
 		 title="我的余额"
+		 link-type="navigateTo"
+		 url="/pages/me/balance/my_balance/my_balance"
 		 is-link
 		/>
 		<van-cell
