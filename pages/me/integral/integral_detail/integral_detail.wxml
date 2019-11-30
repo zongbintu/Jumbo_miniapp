@@ -1,0 +1,28 @@
+<view class="integral_detail">
+
+	<!-- 空态 -->
+	<view wx:if="{{isEmpty}}" class="empty_view">
+
+		<view class="place_holder">
+			暂无记录...
+		</view>
+
+		<!-- 页脚 -->
+		<footer/>
+	</view>
+
+	<!-- 明细列表 -->
+	<view wx:if="{{!isEmpty}}" class="view_list">
+        <van-cell title="+100" value="2019-07-09 16:00" />
+		<van-cell title="+100" value="2019-07-09 16:00" />
+		<van-cell title="+100" value="2019-07-09 16:00" />
+		<van-cell title="+100" value="2019-07-09 16:00" />
+		<van-cell title="+100" value="2019-07-09 16:00" />
+		<van-cell title="+100" value="2019-07-09 16:00" />
+		<van-cell title="+100" value="2019-07-09 16:00" />
+		<van-cell title="+100" value="2019-07-09 16:00" />
+		<van-cell title="+100" value="2019-07-09 16:00" />
+		<van-divider contentPosition="center">到底咯</van-divider>
+	</view>
+
+</view>

@@ -1,5 +1,10 @@
 <view class="home">
 
+    <!-- 购物车悬浮按钮 -->
+    <navigator class="shop_cart" url="/pages/shopcart/shopcart">
+        <van-icon name="cart" size="60rpx" color="#0fcbca" />
+    </navigator>
+
     <!-- 首页轮播图：优选课程 -->
     <swiper class="recommend_class" indicator-dots autoplay indicator-active-color="#fff">
         <swiper-item class="class_item" wx:for="{{classBanner}}" wx:key="{{index}}">
@@ -41,7 +46,7 @@
         <text>精选单品</text>
     </view>
     <scroll-view class='scroll_x' scroll-x>
-        <navigator class="product" wx:for="{{recommendGoods}}" wx:key="index">
+        <navigator url="/pages/product/product" class="product" wx:for="{{recommendGoods}}" wx:key="index">
             <image class='image' src="{{item.img}}" mode="widthFix"></image>
             <view class='title'>{{item.title}}</view>
             <view class='price'>￥ {{item.price}}</view>
@@ -57,7 +62,7 @@
         <text>最新上架</text>
     </view>
     <scroll-view class='scroll_x' scroll-x>
-        <navigator class="product" wx:for="{{recommendGoods}}" wx:key="index">
+        <navigator url="/pages/product/product" class="product" wx:for="{{recommendGoods}}" wx:key="index">
             <image class='image' src="{{item.img}}" mode="widthFix"></image>
             <view class='title'>{{item.title}}</view>
             <view class='price'>￥ {{item.price}}</view>

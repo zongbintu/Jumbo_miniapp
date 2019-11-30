@@ -1,0 +1,114 @@
+<view class="coupon">
+    <view class="blank"></view>
+<view class="coupon-list">
+    <view class="item stamp stamp01 ">
+        <!-- 左侧 -->
+        <view class="float-li t1">
+            <view class="coupon-left">
+                <view class="t t1">￥</view>
+                <view class="t t2">100</view>
+                <view class="t t3">新人专享全场满199减30</view>
+                <view class="t t4">编号：264669616164</view>
+            </view>
+        </view>
+        <!-- 右侧 -->
+        <view class="float-li-rig">
+            <view class="coupon-rig">
+               <view class="t1 t">优惠券</view>
+               <view class="t2 t">2018-01-17</view>
+               <view class="t2 t">2018-01-25</view>
+            </view>
+        </view>
+        <i></i>
+    </view>
+    <view class="item stamp stamp02 ">
+        <!-- 左侧 -->
+        <view class="float-li t1">
+            <view class="coupon-left">
+                <view class="t t1">￥</view>
+                <view class="t t2">100</view>
+                <view class="t t3">新人专享全场满199减30</view>
+                <view class="t t4">编号：264669616164</view>
+            </view>
+        </view>
+        <!-- 右侧 -->
+        <view class="float-li-rig">
+            <view class="coupon-rig">
+               <view class="t1 t">优惠券</view>
+               <view class="t2 t">2018-01-17</view>
+               <view class="t2 t">2018-01-25</view>
+            </view>
+        </view>
+        <i></i>
+    </view>
+    <view class="item stamp stamp03 ">
+        <!-- 左侧 -->
+        <view class="float-li t1">
+            <view class="coupon-left">
+                <view class="t t1">￥</view>
+                <view class="t t2">100</view>
+                <view class="t t3">新人专享全场满199减30</view>
+                <view class="t t4">编号：264669616164</view>
+            </view>
+        </view>
+        <!-- 右侧 -->
+        <view class="float-li-rig">
+            <view class="coupon-rig">
+               <view class="t1 t">优惠券</view>
+               <view class="t2 t">2018-01-17</view>
+               <view class="t2 t">2018-01-25</view>
+            </view>
+        </view>
+        <i></i>
+    </view>
+    <view class="item stamp stamp04 ">
+        <!-- 左侧 -->
+        <view class="float-li t1">
+            <view class="coupon-left">
+                <view class="t t1">￥</view>
+                <view class="t t2">100</view>
+                <view class="t t3">新人专享全场满199减30</view>
+                <view class="t t4">编号：264669616164</view>
+            </view>
+        </view>
+        <!-- 右侧 -->
+        <view class="float-li-rig">
+            <view class="coupon-rig">
+               <view class="t1 t">优惠券</view>
+               <view class="t2 t">2018-01-17</view>
+               <view class="t2 t">2018-01-25</view>
+            </view>
+        </view>
+        <i></i>
+    </view>
+    <view class="item stamp stamp05 ">
+        <!-- 左侧 -->
+        <view class="float-li t1">
+            <view class="coupon-left">
+                <view class="t t1">￥</view>
+                <view class="t t2">100</view>
+                <view class="t t3">新人专享全场满199减30</view>
+                <view class="t t4">编号：264669616164</view>
+            </view>
+        </view>
+        <!-- 右侧 -->
+        <view class="float-li-rig">
+            <view class="coupon-rig">
+               <view class="t1 t">优惠券</view>
+               <view class="t2 t">2018-01-17</view>
+               <view class="t2 t">2018-01-25</view>
+            </view>
+        </view>
+        <i></i>
+    </view>
+</view>
+<view class="blank"></view>
+<view class="box note">
+    <view>优惠券使用方式：</view>
+    <view>1、领取优惠券</view>
+    <view>2、将购买的宝贝加入购物车</view>
+    <view>3、点击结算时勾选使用优惠券</view>
+    <view>4、提交订单、付款，订单完成</view>
+</view>
+</view>
+  

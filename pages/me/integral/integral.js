@@ -1,34 +1,18 @@
-// pages/me/me.js
+// pages/me/integral/integral.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let that = this;
-    // 获取用户信息
-    wx.getStorage({
-      key: 'userInfo',
-      success: (result) => {
-        console.log(result);
-        that.setData({
-          userInfo: result.data
-        })
-      }
-    });
-  },
 
-  gotoOrder(event) {
-    wx.navigateTo({
-      url: '/pages/order/order?type=' + event.currentTarget.dataset.index
-    });
   },
 
   /**

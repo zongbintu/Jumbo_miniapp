@@ -11,17 +11,17 @@
 			/>
 			<view class="info">
 				<view class="">
-					一碗单炒饭
+					{{userInfo.name}}
 				</view>
 				<view class="">
 					金牌用户
 				</view>
 			</view>
 		</view>
-		<view class="setting">
+		<!-- <view class="setting">
 			<van-icon name="setting-o" />
 			设置
-		</view>
+		</view> -->
 	</view>
 
 	<!-- 订单信息 -->
@@ -31,13 +31,14 @@
 		 title="我的订单"
 		 is-link
 		 value="全部订单"
+		 bind:click="gotoOrder"
 		/>
 		<van-grid clickable="true" column-num="5">
-			<van-grid-item icon="send-gift-o" text="待付款" />
-			<van-grid-item icon="free-postage" text="待发货" />
-			<van-grid-item icon="logistics" text="待收货" />
-			<van-grid-item icon="records" text="待评价" />
-			<van-grid-item icon="after-sale" text="售后" />
+			<van-grid-item icon="send-gift-o" text="待付款" bind:click="gotoOrder" data-index="1" />
+			<van-grid-item icon="free-postage" text="待发货" bind:click="gotoOrder" data-index="2" />
+			<van-grid-item icon="logistics" text="待收货" bind:click="gotoOrder" data-index="3" />
+			<van-grid-item icon="records" text="待评价" bind:click="gotoOrder" data-index="4" />
+			<van-grid-item icon="after-sale" text="售后" bind:click="gotoOrder" data-index="5" />
 		</van-grid>
 
 		<van-cell
@@ -52,6 +53,7 @@
 		 icon="vip-card-o"
 		 size="large"
 		 title="我的优惠券"
+		 url="/pages/coupon/coupon"
 		 is-link
 		/>
 		<van-cell
@@ -64,9 +66,10 @@
 		 icon="star-o"
 		 size="large"
 		 title="我的收藏"
+		 url="/pages/collection/collection"
 		 is-link
 		/>
-		<van-cell
+		<!-- <van-cell
 		 icon="balance-o"
 		 size="large"
 		 title="我的佣金"
@@ -77,7 +80,7 @@
 		 size="large"
 		 title="我的推广海报"
 		 is-link
-		/>
+		/> -->
 	</view>
 
 	<!-- 页脚 -->

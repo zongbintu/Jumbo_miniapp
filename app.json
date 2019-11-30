@@ -1,23 +1,28 @@
 {
   "pages": [
-    "pages/login/login",
-    "pages/appointment/appointment",
-    "pages/mall/mall",
-    "pages/product/product",
-    "pages/home/home",
+    "pages/me/me",
+    "pages/coupon/coupon",
+    "pages/collection/collection",
+    "pages/me/integral/integral",
+    "pages/me/integral/integral_detail/integral_detail",
+    "pages/order/order",
     "pages/shopcart/submit/submit",
+    "pages/login/login",
+    "pages/product/product",
+    "pages/mall/mall",
+    "pages/appointment/detail/detail",
+    "pages/appointment/appointment",
+    "pages/home/home",
     "pages/me/address/address",
     "pages/me/add_address/add_address",
     "pages/shopcart/shopcart",
     "pages/venue/venue",
     "pages/store/store",
-    "pages/appointment/detail/detail",
     "pages/class/class",
     "pages/customed/customed",
     
     "pages/me/balance/balance_detail/balance_detail",
     "pages/me/balance/my_balance/my_balance",
-    "pages/me/me",
     "pages/school/school",
     "pages/index/index",
     "pages/logs/logs"
@@ -85,6 +90,9 @@
     "van-goods-action-button": "vant-weapp/goods-action-button/index",
     "van-card": "vant-weapp/card/index",
     "van-sidebar": "vant-weapp/sidebar/index",
-    "van-sidebar-item": "vant-weapp/sidebar-item/index"
+    "van-sidebar-item": "vant-weapp/sidebar-item/index",
+    "van-popup": "vant-weapp/popup/index",
+    "van-tab": "vant-weapp/tab/index",
+    "van-tabs": "vant-weapp/tabs/index"
   }
 }

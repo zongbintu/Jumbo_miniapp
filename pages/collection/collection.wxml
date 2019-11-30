@@ -1,0 +1,20 @@
+<view class="collection">
+
+    <view wx:if="{{list.length > 0}}">
+        <view class="list" wx:for="{{list}}" wx:key="{{index}}">
+            <!-- 列表标题 -->
+            <text class="list_name">{{item.title}}</text>
+            <!-- 列表商品图片 -->
+            <image class="list_img" src="{{item.image}}"></image>
+            <!-- 价格 -->
+            <text class="list_price">￥{{item.price}}</text>
+        </view>
+    </view>
+    
+    <view wx:else>
+        <view class="list_none">暂时没有订单哦~</view>
+    </view>
+
+    <!-- 页脚 -->
+	<footer/>
+</view>

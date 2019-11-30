@@ -13,8 +13,8 @@ let requestHandler = {
     }
 };
 
-// let baseUrl = "http://localhost:8088/api/miniapp";
-let baseUrl = "http://203.195.152.121/api/miniapp";
+let baseUrl = "http://localhost:8088/miniapp";
+// let baseUrl = "http://api.supercube.vip/api/miniapp";
 
 /**
  * 发送网络请求，默认POST

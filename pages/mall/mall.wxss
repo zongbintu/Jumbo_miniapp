@@ -1,7 +1,21 @@
 .home {
     background-color: #fff;
+    position: relative;
 }
 
+/* 购物车按钮 */
+.shop_cart {
+    position: fixed;
+    bottom: 50rpx;
+    right: 50rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50%;
+    width: 80rpx;
+    height: 80rpx;
+    background: #3334;
+}
 
 /* 模块标题 */
 .block_title {

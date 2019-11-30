@@ -1,0 +1,20 @@
+.integral_detail {
+    position: relative;
+
+}
+
+/* 空态 */
+.empty_view {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.empty_view .place_holder {
+    margin-top: 50%;
+    display: block;
+    text-align: center;
+    color: #cccccc;
+    font-size: 35rpx;
+}

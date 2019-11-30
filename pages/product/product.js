@@ -22,7 +22,18 @@ Page({
       "http://cnd.wgj360.com/User/j/jingboyujia/21089/Pic/2019/06/24/201906241354468188.jpg"
     ],
     // 商品信息
-    product: {}
+    product: {
+      "id": 6,
+      "deptId": "6",
+      "title": "静波优享课程",
+      "price": 123,
+      "courseDetail": "静波瑜伽学院是一家集瑜伽锻炼、教练培训为一体的瑜伽专业研习品牌。地理位置优越，环境静谧素雅，公司提供专业、贴心的学习场所，并设有高端环保的瑜伽设施。",
+      "courseType": "2",
+      "lessonPeriod": null,
+      "costPrice": 121,
+      "startTime": null,
+      image: "http://cnd.wgj360.com/User/j/jingboyujia/21089/Pic/2019/06/24/201906241353352685.jpg"
+    }
   },
   onLoad: function (options) {
     let that = this;
@@ -67,7 +78,6 @@ Page({
     wx.switchTab({
       url: '../home/home'
     });
-      
   },
   // 收藏
   addLike() {
@@ -76,10 +86,10 @@ Page({
     });
   },
   // 跳到购物车
-  toCar() {
-    wx.switchTab({
-      url: '/pages/cart/cart'
-    })
+  gotoShopcart() {
+    wx.navigateTo({
+      url: '/pages/shopcart/shopcart'
+    });
   },
   // 立即购买
   immeBuy() {

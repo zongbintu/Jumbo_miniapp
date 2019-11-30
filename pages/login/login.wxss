@@ -1,4 +1,3 @@
-/* pages/login/login.wxss */
 /* 登录界面 */
 .login {
     display: flex;
@@ -85,4 +84,38 @@
 
 .wechat image {
     width: 90rpx;
+}
+
+/* 请求用户手机号码 */
+.request_phone {
+    position: relative;
+}
+
+.tips {
+    margin: 40rpx 50rpx;
+}
+
+.yuga {
+    font-size: 1.2rem;
+    color: #00c3ff;
+    font-weight: bold;
+    margin-right: 20rpx;
+    margin-bottom: 5rpx;
+}
+
+/* 登录按钮 */
+.phone_btn {
+    position: absolute;
+    left: 50%;
+    bottom: 50rpx;
+    color: white;
+    background-color: #10cac9;
+    width: 500rpx;
+    border-radius: 10rpx;
+    font-size: 1.1rem;
+    transform: translateX(-50%);
+    padding: 10rpx 30rpx;
+    text-align: center;
+    box-shadow: 1rpx 1rpx 5rpx #cccc;
+    margin: 0 auto;
 }

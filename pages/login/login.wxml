@@ -34,6 +34,27 @@
         <image src="../../images/wechat.png" mode="widthFix" />
     </button>
 
-    
+    <!-- 请求用户手机号码 -->
+    <van-popup
+    class="request_phone"
+    show="{{ showGetPhoneRequest }}"
+    position="bottom"
+    custom-style="height: 30%;"
+    bind:close="onClose">
+
+        <view class="tips">
+            <view class="yuga">静波瑜伽</view>需要获取您的手机号码
+        </view>
+
+        <view class="tips2">
+            
+        </view>
+
+        <!-- 登录按钮 -->
+        <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="phone_btn align-center">
+            确认授权
+        </button>
+
+    </van-popup>
       
 </view>

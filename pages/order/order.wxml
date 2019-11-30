@@ -1,0 +1,160 @@
+<view class="order">
+    <van-tabs active="{{ active }}" bind:change="onChange" swipeable sticky>
+        <van-tab name="全部" title="全部">
+            <!-- 列表 -->
+            <view wx:if="{{orders.length > 0}}">
+                <view wx:for="{{orders}}" wx:for-item="order" wx:key="index">
+                    <view class="list" wx:for="{{order.list}}" wx:key="{{index}}">
+                        <!-- 列表标题 -->
+                        <text class="list_name">{{item.title}}</text>
+                        <!-- 列表商品图片 -->
+                        <image class="list_img" src="{{item.image}}"></image>
+                        <!-- 价格 -->
+                        <text class="list_price">￥{{item.price}}</text>
+                        <!-- 商品数量加减 -->
+                        <view>
+                            <view class="carts-num">
+                                <!-- 文本框值 -->
+                                <label class="view_text_center" bindinput='input_num' data-index="{{index}}">
+                                    x {{item.num}}
+                                </label>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- 订单操作 -->
+                    <view class="operator">
+                        <!-- 总计 -->
+                        <view class="total_info">
+                            总共{{order.list.length}}件商品 合计：<text class="total_price">￥{{order.price}}</text>
+                        </view>
+                        <van-button plain hairline round type="info" size="small" bind:click="gotoDetail">
+                            查看详情
+                        </van-button>
+                    </view>
+                    <van-divider />
+                </view>
+            </view>
+            <view wx:else>
+                <view class="list_none">暂时没有订单哦~</view>
+            </view>
+        </van-tab>
+        <van-tab name="待付款" title="待付款">
+            <!-- 列表 -->
+            <view wx:if="{{orders.length > 0}}">
+                <view wx:for="{{orders}}" wx:for-item="order" wx:key="index">
+                    <view class="list" wx:for="{{order.list}}" wx:key="{{index}}">
+                        <!-- 列表标题 -->
+                        <text class="list_name">{{item.title}}</text>
+                        <!-- 列表商品图片 -->
+                        <image class="list_img" src="{{item.image}}"></image>
+                        <!-- 价格 -->
+                        <text class="list_price">￥{{item.price}}</text>
+                        <!-- 商品数量加减 -->
+                        <view>
+                            <view class="carts-num">
+                                <!-- 文本框值 -->
+                                <label class="view_text_center" bindinput='input_num' data-index="{{index}}">
+                                    x {{item.num}}
+                                </label>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- 订单操作 -->
+                    <view class="operator">
+                        <!-- 总计 -->
+                        <view class="total_info">
+                            总共{{order.list.length}}件商品 合计：<text class="total_price">￥{{order.price}}</text>
+                        </view>
+                        <van-button plain hairline round type="info" size="small" bind:click="gotoDetail">
+                            查看详情
+                        </van-button>
+                    </view>
+                    <van-divider />
+                </view>
+            </view>
+            <view wx:else>
+                <view class="list_none">暂时没有订单哦~</view>
+            </view>
+        </van-tab>
+        <van-tab name="待发货" title="待发货">
+            <!-- 列表 -->
+            <view wx:if="{{orders.length > 0}}">
+                <view wx:for="{{orders}}" wx:for-item="order" wx:key="index">
+                    <view class="list" wx:for="{{order.list}}" wx:key="{{index}}">
+                        <!-- 列表标题 -->
+                        <text class="list_name">{{item.title}}</text>
+                        <!-- 列表商品图片 -->
+                        <image class="list_img" src="{{item.image}}"></image>
+                        <!-- 价格 -->
+                        <text class="list_price">￥{{item.price}}</text>
+                        <!-- 商品数量加减 -->
+                        <view>
+                            <view class="carts-num">
+                                <!-- 文本框值 -->
+                                <label class="view_text_center" bindinput='input_num' data-index="{{index}}">
+                                    x {{item.num}}
+                                </label>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- 订单操作 -->
+                    <view class="operator">
+                        <!-- 总计 -->
+                        <view class="total_info">
+                            总共{{order.list.length}}件商品 合计：<text class="total_price">￥{{order.price}}</text>
+                        </view>
+                        <van-button plain hairline round type="info" size="small" bind:click="gotoDetail">
+                            查看详情
+                        </van-button>
+                    </view>
+                    <van-divider />
+                </view>
+            </view>
+            <view wx:else>
+                <view class="list_none">暂时没有订单哦~</view>
+            </view>
+        </van-tab>
+        <van-tab name="已发货" title="已发货">
+            <!-- 列表 -->
+            <view wx:if="{{orders.length > 0}}">
+                <view wx:for="{{orders}}" wx:for-item="order" wx:key="index">
+                    <view class="list" wx:for="{{order.list}}" wx:key="{{index}}">
+                        <!-- 列表标题 -->
+                        <text class="list_name">{{item.title}}</text>
+                        <!-- 列表商品图片 -->
+                        <image class="list_img" src="{{item.image}}"></image>
+                        <!-- 价格 -->
+                        <text class="list_price">￥{{item.price}}</text>
+                        <!-- 商品数量加减 -->
+                        <view>
+                            <view class="carts-num">
+                                <!-- 文本框值 -->
+                                <label class="view_text_center" bindinput='input_num' data-index="{{index}}">
+                                    x {{item.num}}
+                                </label>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- 订单操作 -->
+                    <view class="operator">
+                        <!-- 总计 -->
+                        <view class="total_info">
+                            总共{{order.list.length}}件商品 合计：<text class="total_price">￥{{order.price}}</text>
+                        </view>
+                        <van-button plain hairline round type="info" size="small" bind:click="gotoDetail">
+                            查看详情
+                        </van-button>
+                    </view>
+                    <van-divider />
+                </view>
+            </view>
+            <view wx:else>
+                <view class="list_none">暂时没有订单哦~</view>
+            </view>
+        </van-tab>
+        <van-tab title="待评价"></van-tab>
+        <van-tab title="售后"></van-tab>
+    </van-tabs>
+    <!-- footer -->
+    <footer />
+</view>

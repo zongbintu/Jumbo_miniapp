@@ -1,0 +1,18 @@
+<view class="integral">
+    <!-- 概览 -->
+    <view class="summary">
+        <view class="amount">0.00</view>
+        <view class="amount_title">我的积分</view>
+    </view>
+
+    <!-- 查看记录 -->
+    <van-cell 
+    class="goto_detail" 
+    title="积分明细" 
+    is-link 
+    link-type="navigateTo"
+    url="/pages/me/integral/integral_detail/integral_detail" />
+
+    <!-- 页脚 -->
+	<footer/>
+</view>

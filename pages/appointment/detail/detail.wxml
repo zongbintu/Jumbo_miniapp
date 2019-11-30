@@ -34,7 +34,7 @@
     <image class="image_detail" src="{{item}}" />
   </block> -->
 </scroll-view>
-<van-goods-action>
+<van-goods-action id="action_button">
   <van-goods-action-button
     text="立即预约"
     data-id="{{product.id}}" 
