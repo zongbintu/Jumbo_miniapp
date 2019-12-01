@@ -21,8 +21,9 @@
     margin-bottom: 15rpx;
 }
 .time-picker .item .date {
-    display: inline;
-    padding: 7rpx;
+    display: inline-block;
+    width: 55rpx;
+    height: 55rpx;
     color: #111;
 }
 .time-picker .item text.active {

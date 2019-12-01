@@ -12,6 +12,7 @@
     <!-- 课程 -->
     <view class="courses">
         <view class="course" wx:for="{{courses}}" wx:key="index">
+            <van-divider />
             <view class="time">
                 {{item.startTime}} - {{item.endTime}}
             </view>
