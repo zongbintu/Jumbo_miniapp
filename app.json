@@ -1,6 +1,9 @@
 {
   "pages": [
+    "pages/home/home",
+    "pages/mall/mall",
     "pages/me/me",
+    "pages/order/order_detail/order_detail",
     "pages/coupon/coupon",
     "pages/collection/collection",
     "pages/me/integral/integral",
@@ -9,10 +12,8 @@
     "pages/shopcart/submit/submit",
     "pages/login/login",
     "pages/product/product",
-    "pages/mall/mall",
     "pages/appointment/detail/detail",
     "pages/appointment/appointment",
-    "pages/home/home",
     "pages/me/address/address",
     "pages/me/add_address/add_address",
     "pages/shopcart/shopcart",

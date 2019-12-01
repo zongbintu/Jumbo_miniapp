@@ -1,0 +1,38 @@
+<view class="order_detail">
+    <!-- 订单状态 -->
+    <view class="order_status">订单状态：已发货</view>
+    <!-- 收货信息 -->
+    <view class="receive_info">
+        <view>djzhao  18896807726</view>
+        <view>江苏省南京市南京南站</view>
+    </view>
+    <!-- 商品列表 -->
+    <view wx:if="{{list.length > 0}}">
+        <view class="list" wx:for="{{list}}" wx:key="{{index}}">
+            <!-- 列表标题 -->
+            <text class="list_name">{{item.title}}</text>
+            <!-- 列表商品图片 -->
+            <image class="list_img" src="{{item.image}}"></image>
+            <!-- 价格 -->
+            <text class="list_price">￥{{item.price}}</text>
+        </view>
+    </view>
+    <van-divider />
+    <!-- 订单操作 -->
+    <view class="operator">
+        <!-- 总计 -->
+        <view class="total_info">
+            总共{{3}}件商品 合计：
+            <text class="total_price">￥{{123}}</text>
+        </view>
+        <van-button plain hairline round size="small" type="danger" bind:click="gotoDetail">取消订单</van-button>
+        <van-button plain hairline round size="small" type="info">确认收货</van-button>
+        <van-button plain hairline round size="small" type="primary">评价</van-button>
+        <van-button plain hairline round size="small" type="warning">售后</van-button>
+        <!-- <van-button plain hairline round type="info" size="small">
+            查看详情
+        </van-button> -->
+    </view>
+    <!-- 页脚 -->
+    <footer />
+</view>

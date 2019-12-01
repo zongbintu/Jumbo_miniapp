@@ -2,7 +2,7 @@
 
     <!-- 购物车悬浮按钮 -->
     <navigator class="shop_cart" url="/pages/shopcart/shopcart">
-        <van-icon name="cart" size="60rpx" color="#0fcbca" />
+        <van-icon name="cart-o" size="50rpx" color="#fff" />
     </navigator>
 
     <!-- 首页轮播图：优选课程 -->

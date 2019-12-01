@@ -27,7 +27,7 @@
                         <view class="total_info">
                             总共{{order.list.length}}件商品 合计：<text class="total_price">￥{{order.price}}</text>
                         </view>
-                        <van-button plain hairline round type="info" size="small" bind:click="gotoDetail">
+                        <van-button plain hairline round type="info" size="small" data-order-id="" bind:click="gotoDetail">
                             查看详情
                         </van-button>
                     </view>

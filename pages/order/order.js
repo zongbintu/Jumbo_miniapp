@@ -76,6 +76,13 @@ Page({
     ]    
   },
 
+  // 查看订单详情
+  gotoDetail(e) {
+    wx.navigateTo({
+      url: '/pages/order/order_detail/order_detail?orderId=' + e.target.dataset.orderId
+    });
+  },
+
   onChange(event) {
     console.log(event.detail);
     wx.showToast({
