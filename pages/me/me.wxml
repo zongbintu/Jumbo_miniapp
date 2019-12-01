@@ -60,6 +60,7 @@
 		 icon="gold-coin-o"
 		 size="large"
 		 title="我的积分"
+		 url="/pages/me/integral/integral"
 		 is-link
 		/>
 		<van-cell
