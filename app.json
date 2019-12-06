@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/appointment/appointment",
+    "pages/appointment/my_appointment/my_appointment",
     "pages/home/home",
     "pages/mall/mall",
     "pages/me/me",
@@ -13,7 +15,6 @@
     "pages/login/login",
     "pages/product/product",
     "pages/appointment/detail/detail",
-    "pages/appointment/appointment",
     "pages/me/address/address",
     "pages/me/add_address/add_address",
     "pages/shopcart/shopcart",

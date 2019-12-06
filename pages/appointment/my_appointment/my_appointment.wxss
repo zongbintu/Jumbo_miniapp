@@ -1,0 +1,87 @@
+/* pages/appointment/appointment.wxss */
+
+/* 选择日期 */
+.time-picker {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20rpx;
+}
+.time-picker .item {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.time-picker .item text {
+    text-align: center;
+}
+.time-picker .item .week {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 15rpx;
+}
+.time-picker .item .date {
+    display: inline-block;
+    width: 55rpx;
+    height: 55rpx;
+    color: #111;
+}
+.time-picker .item text.active {
+ color: #f8345f;
+}
+.time-picker .item .date.active {
+    border-radius: 100%;
+    color: white;
+    background: #f8345f;
+}
+
+/* 课程 */
+.courses {
+    margin: 50rpx 30rpx;
+}
+.course .time {
+    margin-top: 20rpx;
+    font-size: 0.9rem;
+    color: #888;
+}
+.course .line {
+    margin-bottom: 10rpx;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.course .line .teacher {
+    margin-top: 10rpx;
+    display: flex;
+    align-content: center;
+}
+.course .line .teacher image {
+    width: 150rpx;
+    border-radius: 50%;
+}
+.course .line .teacher .info {
+    display: flex;
+    margin-left: 10rpx;
+    flex-direction: column;
+    justify-content: center;
+}
+.course .line .teacher .info .title {
+    color: black;
+    font-weight: bold;
+}
+.course .line .teacher .info .name {
+    color: #666;
+    font-size: 0.8rem;
+}
+.course .line .button {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.course .line .button .text {
+    font-size: 0.9rem;
+    padding: 15rpx 25rpx;
+    background: #f8345f;
+    color: white;
+    border-radius: 10rpx;
+}

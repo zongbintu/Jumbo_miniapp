@@ -1,0 +1,37 @@
+<!--pages/appointment/appointment.wxml-->
+<view class="appointment">
+
+    <!-- 选择日期 -->
+    <view class="time-picker">
+        <view bindtap="changDate" data-day="{{item.bottom}}" data-date="{{item.date}}" class="item" wx:for="{{dates}}" wx:key="index" wx:for-item="item">
+            <text class="week {{currentSelect === item.bottom ? 'active' : ''}}">{{item.top}}</text>
+            <text class="date {{currentSelect === item.bottom ? 'active' : ''}}">{{item.bottom}}</text>
+        </view>
+    </view>
+
+    <!-- 课程 -->
+    <view class="courses">
+        <view class="course" wx:for="{{courses}}" wx:key="index">
+            <van-divider />
+            <view class="time">
+                {{item.startTime}} - {{item.endTime}}
+            </view>
+            <view class="line">
+                <navigator open-type="navigate" url="/pages/appointment/detail/detail?courseId={{item.courseId}}" hover-class="none" class="teacher">
+                    <image src="http://pkt.zoosnet.net/site/74153360/chat_left_img_share_cn.png" mode="widthFix"  />
+                    <view class="info">
+                        <text class="title">{{item.courseName}}</text>
+                        <text wx:if="{{item.coachName === null}}" class="name">教练：动态分配</text>
+                        <text wx:else class="name">教练：{{item.coachName}}</text>
+                    </view>
+                </navigator>
+                <view class="button">
+                    <text class="text" data-id="{{item.courseId}}" bindtap="goAppointment">取消预约</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 页脚 -->
+	<footer />
+
+</view>
