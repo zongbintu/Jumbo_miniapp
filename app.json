@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/appointment/appointment",
-    "pages/appointment/my_appointment/my_appointment",
     "pages/home/home",
     "pages/mall/mall",
+    "pages/appointment/appointment",
+    "pages/appointment/my_appointment/my_appointment",
     "pages/me/me",
     "pages/order/order_detail/order_detail",
     "pages/coupon/coupon",

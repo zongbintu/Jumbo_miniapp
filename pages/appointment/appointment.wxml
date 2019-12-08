@@ -1,6 +1,11 @@
 <!--pages/appointment/appointment.wxml-->
 <view class="appointment">
 
+    <!-- 我的预约 -->
+    <navigator class="my_appointment" url="/pages/appointment/my_appointment/my_appointment">
+        <van-icon name="todo-list-o" size="50rpx" color="#00c7c6" />
+    </navigator>
+
     <!-- 选择日期 -->
     <view class="time-picker">
         <view bindtap="changDate" data-day="{{item.bottom}}" data-date="{{item.date}}" class="item" wx:for="{{dates}}" wx:key="index" wx:for-item="item">
@@ -26,7 +31,7 @@
                     </view>
                 </navigator>
                 <view class="button">
-                    <text class="text" data-id="{{item.courseId}}" bindtap="goAppointment">立即预约</text>
+                    <text class="text" data-id="{{item.curriculumId}}" bindtap="goAppointment">立即预约</text>
                 </view>
             </view>
         </view>

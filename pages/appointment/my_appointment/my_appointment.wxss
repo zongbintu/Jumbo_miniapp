@@ -1,4 +1,21 @@
-/* pages/appointment/appointment.wxss */
+.appointment {
+    background-color: #fff;
+    position: relative;
+}
+
+.goto_appointment {
+    position: fixed;
+    bottom: 80rpx;
+    right: 50rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50%;
+    width: 80rpx;
+    height: 80rpx;
+    background: #fff4;
+    box-shadow: 1rpx 1rpx 5rpx #ccc;
+}
 
 /* 选择日期 */
 .time-picker {

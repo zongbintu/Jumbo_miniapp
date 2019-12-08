@@ -42,6 +42,14 @@
 		</van-grid>
 
 		<van-cell
+		 icon="todo-list-o"
+		 size="large"
+		 title="我的预约"
+		 link-type="navigateTo"
+		 url="/pages/appointment/my_appointment/my_appointment"
+		 is-link
+		/>
+		<van-cell
 		 icon="paid"
 		 size="large"
 		 title="我的余额"

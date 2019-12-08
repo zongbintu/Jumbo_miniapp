@@ -177,44 +177,6 @@ Page({
       }
     });
 
-    // 请求推荐课程
-    // request.send({
-    //   url: '/recommendCourse',
-    //   data: {},
-    //   success: res => {
-    //     that.setData({
-    //       hotCourses: [],
-    //       teacherCourses: [],
-    //       recommendCourses: []
-    //     })
-    //     let arr1 = [];
-    //     let arr2 = [];
-    //     let arr3 = [];
-    //     res.data.courses.forEach(e => {
-    //       // 0精选热门课程；1名师进修课程；2热门推荐课程
-    //       switch (e.type) {
-    //         case 0:
-    //             arr1.push(e);
-    //           break;
-    //         case 1:
-    //             arr2.push(e);
-    //           break;
-    //         case 2:
-    //             arr3.push(e);
-    //           break;
-    //         default:
-    //           break;
-    //       }
-    //     });
-    //     that.setData({
-    //       recommendCourse: res.data.courses,
-    //       hotCourses: arr1,
-    //       teacherCourses: arr2,
-    //       recommendCourses: arr3
-    //     });
-    //   }
-    // });
-
     // 请求0精选热门课程
     request.send({
       url: '/recommendCourse',
@@ -258,6 +220,18 @@ Page({
         });
       }
     });
+
+    // TODO 代替登录用
+    wx.setStorage({
+      key: 'userInfo',
+      data: {"id":9,"name":"赵冬晋","type":null,"consultants":null,"wechat":"oMvYv5bg2yekqCoLVSI3ssaUVhTY","deptId":null,"phone":"18896807726","consultingCourse":null,"accommodation":null,"advisoryDate":null,"address":null,"customerServic":null,"sfzh":null,"dataSource":null,"certificateNumber":null,"bz":null,"insertTime":"2019-11-30 09:50:46","insertOperator":null,"updateTime":null,"updateOperator":null},
+      success: (result) => {
+        console.log(result);
+      },
+      fail: () => {},
+      complete: () => {}
+    });
+      
 
 
     // wx.setTabBarBadge({

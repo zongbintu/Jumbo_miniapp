@@ -29,10 +29,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userInfo: {},
     // 一周日期
     dates: [],
-    // 当前选择的日期
+    // 当前选择的日期-天
     currentSelect: 0,
+    // 当前选择的日期-年月日
+    currentSelectDate: '',
     // 课程数据
     courses: [{
       "courseId": 6,
@@ -53,22 +56,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 获取课程类型
-    let type = options.type;
-    if (type === "0") {
-      wx.setNavigationBarTitle({
-        title: '私教课'
-      });
-    } else {
-      wx.setNavigationBarTitle({
-        title: '团体课'
-      });
-    }
-    // 计算日期
-    this.initDate(this);
+    let that = this;
+    wx.getStorage({
+      key: 'userInfo',
+      success: (result) => {
+        that.setData({
+          userInfo: result.data
+        });
 
-    this.updateCourses(this.data.dates[0].date);
-
+        // 计算日期
+        this.initDate(this);
+        // 更新课程
+        this.updateCourses(this.data.dates[0].date);
+      }
+    });
   },
 
   /**
@@ -79,8 +80,9 @@ Page({
     let that = this;
     // 请求课程
     request.send({
-      url: '/getAppointmentCourse',
+      url: '/alreadyAppointment',
       data: {
+        memberId: that.data.userInfo.id,
         date: date
       },
       success: res => {
@@ -102,23 +104,23 @@ Page({
   },
 
   /**
-   * 进行约课
+   * 取消约课
    */
-  goAppointment(event) {
-    let courseId = event.currentTarget.dataset.id;
-    let memberId = 9;
+  cancelAppointment(event) {
+    let that = this;
+    let appointmentId = event.currentTarget.dataset.id;
     // 发送请求
     request.send({
-      url: '/submitAppointment',
+      url: '/cancelAppointment',
       data: {
-        courseId,
-        memberId
+        appointmentId
       },
       success: res => {
         if (res.data.code === 0) {
           wx.showToast({
             title: res.data.msg
           });
+          that.updateCourses(that.data.currentSelectDate);
         } else {
           wx.showToast({
             title: '请稍后重试',
@@ -151,6 +153,7 @@ Page({
     }
     that.setData({
       currentSelect: now.getDate(),
+      currentSelectDate: now.format("yyyy-MM-dd"),
       dates: arr
     });
   },
@@ -160,7 +163,8 @@ Page({
    */
   changDate: function (e) {
     this.setData({
-      currentSelect: e.currentTarget.dataset.day
+      currentSelect: e.currentTarget.dataset.day,
+      currentSelectDate: e.currentTarget.dataset.date
     });
     this.updateCourses(e.currentTarget.dataset.date);
   },

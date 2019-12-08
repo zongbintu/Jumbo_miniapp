@@ -29,6 +29,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userInfo: {},
     // 一周日期
     dates: [],
     // 当前选择的日期
@@ -64,10 +65,21 @@ Page({
         title: '团体课'
       });
     }
-    // 计算日期
-    this.initDate(this);
 
-    this.updateCourses(this.data.dates[0].date);
+    let that = this;
+    wx.getStorage({
+      key: 'userInfo',
+      success: (result) => {
+        that.setData({
+          userInfo: result.data
+        });
+
+        // 计算日期
+        this.initDate(this);
+        // 更新课程
+        this.updateCourses(this.data.dates[0].date);
+      }
+    });
 
   },
 
@@ -105,13 +117,13 @@ Page({
    * 进行约课
    */
   goAppointment(event) {
-    let courseId = event.currentTarget.dataset.id;
-    let memberId = 9;
+    let curriculumId = event.currentTarget.dataset.id;
+    let memberId = this.data.userInfo.id;
     // 发送请求
     request.send({
       url: '/submitAppointment',
       data: {
-        courseId,
+        curriculumId,
         memberId
       },
       success: res => {
