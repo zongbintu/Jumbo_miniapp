@@ -219,21 +219,7 @@ Page({
           venues: res.data.shops
         });
       }
-    });
-
-    // TODO 代替登录用
-    wx.setStorage({
-      key: 'userInfo',
-      data: {"id":9,"name":"赵冬晋","type":null,"consultants":null,"wechat":"oMvYv5bg2yekqCoLVSI3ssaUVhTY","deptId":null,"phone":"18896807726","consultingCourse":null,"accommodation":null,"advisoryDate":null,"address":null,"customerServic":null,"sfzh":null,"dataSource":null,"certificateNumber":null,"bz":null,"insertTime":"2019-11-30 09:50:46","insertOperator":null,"updateTime":null,"updateOperator":null},
-      success: (result) => {
-        console.log(result);
-      },
-      fail: () => {},
-      complete: () => {}
-    });
-      
-
-
+    });  
     // wx.setTabBarBadge({
     //   index: 3,
     //   text: '1'

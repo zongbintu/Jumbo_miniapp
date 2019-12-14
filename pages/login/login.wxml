@@ -5,12 +5,12 @@
     
     <!-- 账号 -->
     <view class="input align-center">
-        <input type="text" placeholder="账号" value="{{username}}" />
+        <input disabled="{{true}}" type="text" placeholder="账号" value="{{username}}" />
     </view>
 
     <!-- 密码 -->
     <view class="input align-center">
-        <input type="password" placeholder="密码" value="{{password}}" />
+        <input disabled="{{true}}" type="password" placeholder="密码" value="{{password}}" />
     </view>
 
     <!-- 忘记密码 -->

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/home/home",
     "pages/mall/mall",
     "pages/appointment/appointment",
@@ -12,7 +13,6 @@
     "pages/me/integral/integral_detail/integral_detail",
     "pages/order/order",
     "pages/shopcart/submit/submit",
-    "pages/login/login",
     "pages/product/product",
     "pages/appointment/detail/detail",
     "pages/me/address/address",

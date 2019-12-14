@@ -5,16 +5,13 @@
 		<view class="user">
 			<image
 			 class="avator"
-			 src="http://pkt.zoosnet.net/site/74153360/chat_left_img_share_cn.png"
+			 src="{{userInfo.avatarUrl}}"
 			 mode="widthFix"
 			 lazy-load="false"
 			/>
 			<view class="info">
 				<view class="">
-					{{userInfo.name}}
-				</view>
-				<view class="">
-					金牌用户
+					{{userInfo.nickName}}
 				</view>
 			</view>
 		</view>
