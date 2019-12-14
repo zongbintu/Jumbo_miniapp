@@ -1,3 +1,4 @@
+import filter from "../../utils/filter";
 // pages/me/me.js
 Page({
 
@@ -12,6 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    filter.identity();
     let that = this;
     // 获取用户信息
     wx.getStorage({

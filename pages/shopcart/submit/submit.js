@@ -1,3 +1,4 @@
+import filter from "../../../utils/filter";
 // page/component/new-pages/cart/cart.js
 // 默认请求第一页
 var numbers = 1;
@@ -44,6 +45,10 @@ Page({
     totalPrice: 0, // 总价，初始为0
     // 全选状态
     selectAllStatus: true, // 全选状态，默认全选
+  },
+
+  onLoad: function (options) {
+    filter.identity();
   },
   
   onShow() {

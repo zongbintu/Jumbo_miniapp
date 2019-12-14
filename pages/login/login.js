@@ -14,6 +14,34 @@ Page({
     showGetPhoneRequest: false
   },
 
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    wx.showLoading({
+      title: "加载中"
+    });
+    // 自动登录
+    wx.getStorage({
+      key: 'userInfo',
+      success: (result) => {
+        console.log(result);
+        let userInfo = result.data;
+        // 存在openId、手机号即可自动登录
+        if (userInfo && userInfo.openId && userInfo.purePhoneNumber) {
+          wx.switchTab({
+            url: '../home/home'
+          });
+        }
+      },
+      fail: () => {
+        console.log("获取userInfo失败");},
+      complete: () => {
+        wx.hideLoading();
+      }
+    });
+  },
+
   // 忘记密码
   forgetPwd: function () {
     wx.showToast({
@@ -186,34 +214,6 @@ Page({
       title: "请等待",
       mask: true
     });
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    wx.showLoading({
-      title: "加载中"
-    });
-    // 自动登录
-    wx.getStorage({
-      key: 'userInfo',
-      success: (result) => {
-        console.log(result.data);
-        let userInfo = result.data;
-        // 存在openId、手机号即可自动登录
-        if (userInfo && userInfo.openId && userInfo.purePhoneNumber) {
-          wx.switchTab({
-            url: '../home/home'
-          });
-        }
-      },
-      fail: () => {},
-      complete: () => {
-        wx.hideLoading();
-      }
-    });
-
   },
 
   /**

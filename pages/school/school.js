@@ -1,5 +1,5 @@
 // pages/school/school.js
-
+import filter from "../../utils/filter";
 let WxParse = require('../../utils/wxParse/wxParse.js');
 
 // let article = '<div>我是HTML代码</div>';
@@ -30,7 +30,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    filter.identity();
     let that = this;
     let article = '<p style=&quot;text-align: justify; line-height: 1.75em;&quot;><span style=&quot;font-size: 16px;&quot;><strong><span style=&quot;color: rgb(49, 133, 155);&quot;>静波瑜伽学院</span></strong></span><span style=&quot;font-size: 14px;&quot;>是一家集瑜伽锻炼、教练培训为一体的瑜伽专业研习品牌。地理位置优越，环境静谧素雅，公司提供专业、贴心的学习场所，并设有高端环保的瑜伽设施。</span></p><p style=&quot;text-align: justify; line-height: 1.75em;&quot;><span style=&quot;font-size: 14px;&quot;>通过优质的服务，丰富的课程体系，专业的教学和高品质的环境，指引瑜伽学员从零基础开始学习瑜伽，正确入门，并获得一种纯净，健康，快乐的信念经历生命的过程,身心灵共修。十几年沉淀，静波瑜伽以专业的教学与课程服务赢得了广大瑜伽爱好者的信赖！</span></p><p><br/></p>';
 

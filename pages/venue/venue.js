@@ -1,3 +1,4 @@
+import filter from "../../utils/filter";
 import request from "../../utils/request";
 
 // pages/venue/venue.js
@@ -43,6 +44,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    filter.identity();
     let that = this;
     // 请求门店
     request.send({

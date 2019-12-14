@@ -1,3 +1,5 @@
+import filter from "../../../utils/filter";
+
 var area = require('../../../utils/area.js');
 var areaInfo = []; //所有省市区县数据
 var provinces = []; //省
@@ -26,7 +28,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    filter.identity();
   },
 
   /**

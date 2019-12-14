@@ -1,5 +1,6 @@
 let WxParse = require('../../utils/wxParse/wxParse.js');
 import request from "../../utils/request";
+import filter from "../../utils/filter";
 
 Page({
   data: {
@@ -36,6 +37,7 @@ Page({
     }
   },
   onLoad: function (options) {
+    filter.identity();
     let that = this;
 
     let productId = options.productId;

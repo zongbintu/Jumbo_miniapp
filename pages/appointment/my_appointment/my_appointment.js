@@ -1,4 +1,5 @@
 import request from "../../../utils/request";
+import filter from "../../../utils/filter";
 // pages/appointment/appointment.js
 /**
  *对Date的扩展，将 Date 转化为指定格式的String
@@ -56,6 +57,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    filter.identity();
     let that = this;
     wx.getStorage({
       key: 'userInfo',
