@@ -12,7 +12,7 @@
     title="余额明细" 
     is-link 
     link-type="navigateTo"
-    url="/pages/me/balance/balance_detail/balance_detail" />
+    url="/pages/me/balance/balance_detail/balance_detail1" />
 
     <!-- 页脚 -->
 	<footer/>

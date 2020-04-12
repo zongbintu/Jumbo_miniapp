@@ -180,45 +180,56 @@ Page({
     });
 
     // 请求0精选热门课程
-    request.send({
-      url: '/recommendCourse',
-      data: {type: 0},
-      success: res => {
-        that.setData({
-          hotCourses: res.data.courses
-        });
-      }
-    });
+    // request.send({
+    //   url: '/recommendCourse',
+    //   data: {type: 0},
+    //   success: res => {
+    //     that.setData({
+    //       hotCourses: res.data.courses
+    //     });
+    //   }
+    // });
 
     // 请求1名师进修课程
-    request.send({
-      url: '/recommendCourse',
-      data: {type: 1},
-      success: res => {
-        that.setData({
-          teacherCourses: res.data.courses
-        });
-      }
-    });
+    // request.send({
+    //   url: '/recommendCourse',
+    //   data: {type: 1},
+    //   success: res => {
+    //     that.setData({
+    //       teacherCourses: res.data.courses
+    //     });
+    //   }
+    // });
 
     // 请求2热门推荐课程
-    request.send({
-      url: '/recommendCourse',
-      data: {type: 2},
-      success: res => {
-        that.setData({
-          recommendCourses: res.data.courses
-        });
-      }
-    });
+    // request.send({
+    //   url: '/recommendCourse',
+    //   data: {type: 2},
+    //   success: res => {
+    //     that.setData({
+    //       recommendCourses: res.data.courses
+    //     });
+    //   }
+    // });
 
     // 请求门店
+    // request.send({
+    //   url: '/shops',
+    //   data: {},
+    //   success: res => {
+    //     that.setData({
+    //       venues: res.data.shops
+    //     });
+    //   }
+    // });  
+
     request.send({
-      url: '/shops',
+      url: '/getVenuesList',
       data: {},
       success: res => {
+        // console.log(res.data);
         that.setData({
-          venues: res.data.shops
+          venues: res.data.list
         });
       }
     });  
@@ -235,6 +246,16 @@ Page({
     //   wx.hideNavigationBarLoading();
     // }, 2000)
     // wx.showNavigationBarLoading();
+  },
+
+  // 打开场馆详情
+  gotoVenueDetail(e) {
+    let index = e.currentTarget.dataset.index;
+    var model = JSON.stringify(this.data.venues[index]);
+    console.log("djzhao", model);
+    wx.navigateTo({
+      url: '/pages/venue/detail/detail?model=' + model,
+    })
   },
 
   // 用户名变化
@@ -282,13 +303,23 @@ Page({
       return;
     }
 
+    if (this.data.message === '') {
+      wx.showToast({
+        title: '请输入留言内容',
+        icon: 'none',
+        duration: 1500,
+        mask: true
+      });
+      return;
+    }
+
     let that = this;
 
     // 发送预约
     request.send({
-      url: '/submitAppointment',
+      url: '/submitMessage',
       data: {
-        name: that.data.username,
+        username: that.data.username,
         phone: that.data.phoneNumber,
         message: that.data.message
       },
@@ -308,7 +339,7 @@ Page({
           message: ''
         })
         wx.showToast({
-          title: '预约成功',
+          title: '提交成功',
           duration: 1500
         });
       }

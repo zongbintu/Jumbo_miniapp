@@ -1,0 +1,22 @@
+<!-- 场馆详情页 -->
+<!-- banner -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <!-- <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+    </swiper-item>
+  </block> -->
+  <swiper-item>
+    <image src="{{venue.venueCover}}" mode="widthFix" data-src="{{item}}" bindtap="previewImage"></image>
+  </swiper-item>
+</swiper>
+<view class="detail">
+  <text class="title">{{venue.name}}</text>
+</view>
+<view class="separate"></view>
+<van-cell-group>
+  <van-cell title="地址" value="{{venue.address}}" />
+  <van-cell title="营业状态" value="{{venue.status == 1 ? '正常' : '休息'}}" />
+  <van-cell title="联系方式" value="{{venue.telephone}}" />
+  <van-cell title="场馆类型" value="{{venue.type}}" />  
+</van-cell-group>

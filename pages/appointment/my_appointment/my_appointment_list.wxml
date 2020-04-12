@@ -1,0 +1,26 @@
+<!--pages/appointment/my_appointment/my_appointment_list.wxml-->
+<view class="my_appointment_list">
+    
+    <!-- 空态 -->
+	<view wx:if="{{isEmpty}}" class="empty_view">
+
+		<view class="place_holder">
+			暂无记录...
+		</view>
+
+    </view>
+    
+    <view class="list" wx:for="{{courses}}" wx:key="index">
+        <van-cell title="{{item.courseName}} - {{status[item.bookingStatus]}}" value="{{util.sub(item.date)}} {{item.openingTime}}" />
+    </view>
+
+    <wxs module="util">
+        var sub = function(val) {
+            return val.substring(5)
+        }
+        module.exports.sub = sub;
+    </wxs>
+    
+    <!-- 页脚 -->
+    <footer/>
+</view>

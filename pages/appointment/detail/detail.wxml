@@ -1,6 +1,5 @@
 <!-- 商品详情页 -->
 <import src="../../../utils/wxParse/wxParse.wxml" />
-
 <!-- banner -->
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <!-- <block wx:for="{{imgUrls}}">
@@ -9,31 +8,55 @@
     </swiper-item>
   </block> -->
   <swiper-item>
-    <image src="{{product.image}}" data-src="{{item}}" bindtap="previewImage"></image>
+    <image src="{{course.coursePicture}}" data-src="{{item}}" bindtap="previewImage"></image>
   </swiper-item>
 </swiper>
-<scroll-view scroll-y="true">
-  <view class="detail">
-    <text class="title">{{product.courseName}}</text>
-    <text class="price">￥{{product.price}}</text>
-  </view>
-  <view class="separate"></view>
-  <!-- sku选择 -->
-  <!-- <text bindtap="toggleDialog">请选择购买数量</text>
-  <view class="separate"></view>
-  <text>商品评价</text>
-  <text class="text-remark">东西还可以，好评~</text>
-  <view class="separate"></view> -->
-  <text style="margin:20rpx 0 0 20rpx; border-left:red 10rpx solid; padding-left:20rpx; color:red;">课程详情</text>
-  <!-- 富文本 -->
-  <view class="article" hover-class="none" hover-stop-propagation="false">
-      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
-  </view>
-  <!-- 图片列表 -->
-  <!-- <block wx:for-items="{{detailImg}}" wx:key="name">
-    <image class="image_detail" src="{{item}}" />
-  </block> -->
-</scroll-view>
+<view class="detail">
+  <text class="title">{{course.courseName}}</text>
+</view>
+<view class="separate"></view>
+<!-- sku选择 -->
+<!-- <text bindtap="toggleDialog">请选择购买数量</text>
+<view class="separate"></view>
+<text>商品评价</text>
+<text class="text-remark">东西还可以，好评~</text>
+<view class="separate"></view> -->
+<text class="info-title">课程详情</text>
+<!-- 富文本 -->
+<!-- <view class="article" hover-class="none" hover-stop-propagation="false">
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view> -->
+<van-cell-group>
+  <van-cell title="课程类型" value="{{type[course.type]}}" />
+  <van-cell title="难度" value="{{course.difficulty}}" />
+  <van-cell title="课程形式" value="{{courseFormat[course.courseFormat]}}" />
+  <!-- <van-cell title="教练" value="zhangyu" /> -->
+  <van-cell title="教室(场所)" value="{{course.siteName}}" />
+  <van-cell title="开课日期" value="{{course.date}}" />
+  <van-cell title="开课时间" value="{{course.openingTime}}" />
+  <van-cell title="课时长度" value="{{course.courseDuration}}分钟" />
+  <!-- <van-cell title="课程标签" value="健身 塑性" /> -->
+  <van-cell title="可预约人数" value="{{course.maximumAttendance}}" />
+  <!-- <van-cell title="已预约人数" value="20" />
+  <van-cell title="剩余可预约人数" value="3" /> -->
+</van-cell-group>
+<text class="info-title">预约信息</text>
+<van-cell-group>
+  <!-- <van-cell title="会员卡" value="次卡" /> -->
+  <van-cell title="姓名" value="{{userInfo.nickName}}" />
+  <van-cell title="本次消费" value="1" />
+  <van-cell title="预约人数" value="1人" />
+  <van-field bind:change="remarkChange" required clearable label="备注" input-align="right" placeholder="备注信息" bind:click-icon="onClickIcon" />
+</van-cell-group>
+<view class="submit-btn">
+  <van-button color="linear-gradient(to right, #4bb0ff, #6149f6)" type="info" round block data-id="{{course.id}}" bind:click="goAppointment">
+    立即预约
+  </van-button>
+</view>
+<!-- 图片列表 -->
+<!-- <block wx:for-items="{{detailImg}}" wx:key="name">
+  <image class="image_detail" src="{{item}}" />
+</block> -->
 <!-- <van-goods-action id="action_button">
   <van-goods-action-button
     text="立即预约"

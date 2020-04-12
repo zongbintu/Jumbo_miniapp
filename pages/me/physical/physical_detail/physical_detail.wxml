@@ -1,0 +1,16 @@
+<van-divider contentPosition="center">体测信息</van-divider>
+<van-cell-group>
+  <van-cell title="体侧时间" value="{{bodyInfo.bodyExaminationTime}}" />
+  <van-cell title="身高" value="{{bodyInfo.height}}CM" />
+  <van-cell title="体重" value="{{bodyInfo.weight}}KG" />
+  <van-cell title="体脂率" value="{{bodyInfo.bodyFatRate}}%" />  
+  <van-cell title="水分率" value="{{bodyInfo.moistureDatio}}%" />  
+  <van-cell title="肌肉率" value="{{bodyInfo.muscleRate}}%" />  
+  <van-cell title="体型判断" value="{{bodyInfo.bodyShapeJudgment}}" />  
+  <van-cell title="代谢年龄" value="{{bodyInfo.metabolicAge}}" />  
+  <van-cell title="骨含量" value="{{bodyInfo.boneContent}}" />  
+  <van-cell title="内酯含量" value="{{bodyInfo.lactoneContent}}" />  
+  <van-cell title="体侧对比" value="{{bodyInfo.somatometricComparison}}" />  
+</van-cell-group>
+<!-- 页脚 -->
+<footer/>

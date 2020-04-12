@@ -11,7 +11,7 @@
     title="积分明细" 
     is-link 
     link-type="navigateTo"
-    url="/pages/me/integral/integral_detail/integral_detail" />
+    url="/pages/me/integral/integral_detail/integral_detail1" />
 
     <!-- 页脚 -->
 	<footer/>

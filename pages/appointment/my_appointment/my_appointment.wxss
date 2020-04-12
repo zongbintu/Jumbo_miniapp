@@ -3,6 +3,20 @@
     position: relative;
 }
 
+.my_appointment_list {
+    position: fixed;
+    bottom: 80rpx;
+    right: 140rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50%;
+    width: 80rpx;
+    height: 80rpx;
+    background: #fff4;
+    box-shadow: 1rpx 1rpx 5rpx #ccc;
+}
+
 .goto_appointment {
     position: fixed;
     bottom: 80rpx;
@@ -20,10 +34,11 @@
 /* 选择日期 */
 .time-picker {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 20rpx;
+    /* justify-content: space-evenly;
+    margin-top: 20rpx; */
 }
 .time-picker .item {
+    padding: 20rpx 30rpx 0rpx 30rpx;
     display: flex;
     flex-direction: column;
     align-content: center;

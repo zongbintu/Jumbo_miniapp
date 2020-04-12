@@ -1,6 +1,6 @@
-import request from "../../../../utils/request";
-import filter from "../../../../utils/filter";
-// pages/me/integral/integral_detail/integral_detail.js
+import request from "../../../utils/request";
+import filter from "../../../utils/filter";
+// pages/me/physical/physical.js
 Page({
 
   /**
@@ -28,7 +28,7 @@ Page({
         })
         // 请求积分记录
         request.send({
-          url: '/getIntegrals/' + that.data.userInfo.id,
+          url: '/getBodyInfo/' + that.data.userInfo.id,
           data: {},
           success: res => {
             let empty = false;
@@ -43,6 +43,16 @@ Page({
         });
       }
     });
+  },
+
+  // 打开体测详情
+  gotoPhysicalDetail(e) {
+    let index = e.currentTarget.dataset.index;
+    var model = JSON.stringify(this.data.recode[index]);
+    console.log("djzhao", model);
+    wx.navigateTo({
+      url: '/pages/me/physical/physical_detail/physical_detail?model=' + model,
+    })
   },
 
   /**

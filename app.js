@@ -41,3 +41,11 @@ App({
   },
   request: require('./utils/request')
 })
+
+
+// {
+//   "pagePath": "pages/mall/mall",
+//   "iconPath": "images/ic_mall.png",
+//   "selectedIconPath": "images/ic_mall_HL.png",
+//   "text": "商城"
+// },

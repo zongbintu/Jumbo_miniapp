@@ -40,13 +40,126 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/me/me",
+					"pathName": "pages/me/me",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/home",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/appointment/appointment",
+					"pathName": "pages/appointment/appointment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/appointment/my_appointment/my_appointment_list",
+					"pathName": "pages/appointment/my_appointment/my_appointment_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/me/me",
+					"pathName": "pages/me/me",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/home",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/me/detail/detail",
+					"pathName": "pages/me/detail/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/me/vip/vip",
+					"pathName": "pages/me/vip/vip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/appointment/detail/detail",
+					"pathName": "pages/appointment/detail/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/appointment/my_appointment/my_appointment_list",
+					"pathName": "pages/appointment/my_appointment/my_appointment_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/venue/detail/detail",
+					"pathName": "pages/venue/detail/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/me/integral/integral_detail/integral_detail",
+					"pathName": "pages/me/integral/integral_detail/integral_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/me/physical/physical",
+					"pathName": "pages/me/physical/physical",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/appointment/appointment",
+					"pathName": "pages/appointment/appointment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/appointment/my_appointment/my_appointment",
+					"pathName": "pages/appointment/my_appointment/my_appointment",
+					"scene": null
+				}
+			]
 		}
 	}
 }

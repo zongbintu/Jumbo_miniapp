@@ -7,32 +7,32 @@
   </swiper>
 
   <!-- 约课 -->
-  <view class="appointment-course">
+  <!-- <view class="appointment-course">
     <image src="../../images/private_course.png" mode="widthFix" data-type="0" bindtap="gotoAppointment" />
     <image src="../../images/team_course.png" mode="widthFix" data-type="1" bindtap="gotoAppointment" />
-  </view>
+  </view> -->
 
   <!-- 精品活动 -->
   <!--<view class="title">精品活动</view>-->
-  <view class="activity">
+  <!-- <view class="activity">
     <navigator url="{{item.url}}" hover-class="none" class="activity_item" wx:for="{{activity}}" wx:key="{{index}}">
       <image src="../../images/{{item.img}}" mode="widthFix"/>
       <text>{{item.title}}</text>
     </navigator>
-  </view>
+  </view> -->
 
   <!-- 通知 closeable 模式，在右侧显示关闭按钮  mode="closeable" -->
   <view class="inform" wx:if="{{notifications.length > 0}}">
     <van-notice-bar backgroundColor="#ECF9FF" color="#409DFB" left-icon="volume-o "
                     text="{{notifications[0].title}}"/>
-    <image mode="widthFix" src="http://cnd.wgj360.com/Admin/Pic/2019/06/27/201906271657473069.png" />
-    <navigator url="../customed/customed?articleId=3" class="sign-up">
+    <!-- <image mode="widthFix" src="http://cnd.wgj360.com/Admin/Pic/2019/06/27/201906271657473069.png" /> -->
+    <!-- <navigator url="../customed/customed?articleId=3" class="sign-up">
       <button>点击立即报名</button>
-    </navigator>
+    </navigator> -->
   </view>
 
   <!-- 精选热门课程 -->
-  <view class="block_title" wx:if="{{hotCourses.length > 0}}">
+  <!-- <view class="block_title" wx:if="{{hotCourses.length > 0}}">
     <image mode="widthFix" src="../../images/quote.png" />
     <text>精选热门课程</text>
   </view>
@@ -50,10 +50,10 @@
           <van-icon name="add-o" />
         </view>
       </navigator>
-  </view>
+  </view> -->
   
   <!-- 名师进修课程 -->
-  <view class="block_title" wx:if="{{teacherCourses.length > 0}}">
+  <!-- <view class="block_title" wx:if="{{teacherCourses.length > 0}}">
     <image mode="widthFix" src="../../images/quote.png" />
     <text>名师进修课程</text>
   </view>
@@ -71,10 +71,10 @@
           <van-icon name="add-o" />
         </view>
       </navigator>
-  </view>
+  </view> -->
   
   <!-- 热门课程推荐 -->
-  <view class="block_title" wx:if="{{recommendCourses.length > 0}}">
+  <!-- <view class="block_title" wx:if="{{recommendCourses.length > 0}}">
     <image mode="widthFix" src="../../images/quote.png" />
     <text>热门课程推荐</text>
   </view>
@@ -91,16 +91,19 @@
           </view>
         </view>
       </navigator>
-  </view>
+  </view> -->
 
   <!-- 场馆 -->
-  <view class="venue">
+  <!-- <view class="venue">
     <image wx:for="{{venues}}" src="{{item.imgUrl}}" mode="widthFix" wx:key="{{index}}" />
+  </view> -->
+  <view class="venue">
+    <image wx:for="{{venues}}" src="{{item.venueCover}}" mode="widthFix" wx:key="{{index}}" bindtap="gotoVenueDetail" data-index="{{index}}"/>
   </view>
 
   <view class="block_title">
     <image mode="widthFix" src="../../images/quote.png" />
-    <text>预约报名</text>
+    <text>咨询/留言</text>
   </view>
   <!-- 预约报名 -->
   <view class="booking">
@@ -134,7 +137,7 @@
     </van-cell-group>
 
     <view class="submi-btn">
-      <button bindtap="submitAppointment">提交预约</button>
+      <button bindtap="submitAppointment">提交</button>
     </view>
 
   </view>

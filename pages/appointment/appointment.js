@@ -57,16 +57,16 @@ Page({
   onLoad: function (options) {
     filter.identity();
     // 获取课程类型
-    let type = options.type;
-    if (type === "0") {
-      wx.setNavigationBarTitle({
-        title: '私教课'
-      });
-    } else {
-      wx.setNavigationBarTitle({
-        title: '团体课'
-      });
-    }
+    // let type = options.type;
+    // if (type === "0") {
+    //   wx.setNavigationBarTitle({
+    //     title: '私教课'
+    //   });
+    // } else {
+    //   wx.setNavigationBarTitle({
+    //     title: '团体课'
+    //   });
+    // }
 
     let that = this;
     wx.getStorage({
@@ -95,6 +95,7 @@ Page({
     request.send({
       url: '/getAppointmentCourse',
       data: {
+        memberId: that.data.userInfo.id,
         date: date
       },
       success: res => {
@@ -115,6 +116,16 @@ Page({
     });
   },
 
+  // 打开课程详情
+  gotoAppointmentDetail(e) {
+    let index = e.currentTarget.dataset.index;
+    var model = JSON.stringify(this.data.courses[index]);
+    console.log("djzhao", model);
+    wx.navigateTo({
+      url: '/pages/appointment/detail/detail?model=' + model,
+    })
+  },
+
   /**
    * 进行约课
    */
@@ -126,7 +137,8 @@ Page({
       url: '/submitAppointment',
       data: {
         curriculumId,
-        memberId
+        memberId,
+        remark: ''
       },
       success: res => {
         if (res.data.code === 0) {
@@ -150,7 +162,7 @@ Page({
     let now = new Date();
     let arr = [];
     let weekDays = ['日', '一', '二', '三', '四', '五', '六'];
-    for (let i = 0; i < 7; ++i) {
+    for (let i = 0; i < 31; ++i) {
       let tempTime = new Date();
       tempTime.setDate(now.getDate() + i);
       // 周几

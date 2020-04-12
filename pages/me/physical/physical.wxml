@@ -13,8 +13,7 @@
 
 	<!-- 明细列表 -->
 	<view wx:if="{{!isEmpty}}" class="view_list">
-		<view class="total">总积分：{{recode[0].integralBalance}}</view>
-		<van-divider contentPosition="center">积分记录</van-divider>
+		<van-divider contentPosition="center">体测记录</van-divider>
         <!-- <van-cell title="+100" value="2019-07-09 16:00" />
 		<van-cell title="+100" value="2019-07-09 16:00" />
 		<van-cell title="+100" value="2019-07-09 16:00" />
@@ -24,8 +23,10 @@
 		<van-cell title="+100" value="2019-07-09 16:00" />
 		<van-cell title="+100" value="2019-07-09 16:00" />
 		<van-cell title="+100" value="2019-07-09 16:00" /> -->
-		<van-cell wx:for="{{recode}}" title="{{item.integralNumber < 0 ? item.integralNumber : '+' + item.integralNumber}}" value="{{item.operatorTime}}" />
+		<van-cell wx:for="{{recode}}" title="{{item.bodyExaminationTime}}" value="" bindtap="gotoPhysicalDetail" data-index="{{index}}" />
 		<van-divider contentPosition="center">到底咯</van-divider>
 	</view>
 
+    <!-- 页脚 -->
+	<footer/>
 </view>

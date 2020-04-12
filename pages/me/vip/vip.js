@@ -1,6 +1,6 @@
-import request from "../../../../utils/request";
-import filter from "../../../../utils/filter";
-// pages/me/integral/integral_detail/integral_detail.js
+import request from "../../../utils/request";
+import filter from "../../../utils/filter";
+// pages/me/vip/vip.js
 Page({
 
   /**
@@ -9,7 +9,9 @@ Page({
   data: {
     userInfo: {},
     isEmpty: true,
-    recode: []
+    recode: [],
+    // 会员卡类型。1：储值类型；2：次卡类型；3：期限类型
+    type: ['会员卡', '储值卡', '次卡', '期限卡']
   },
 
   /**
@@ -26,9 +28,9 @@ Page({
         that.setData({
           userInfo: result.data
         })
-        // 请求积分记录
+        // 请求会员卡
         request.send({
-          url: '/getIntegrals/' + that.data.userInfo.id,
+          url: '/getVipInfo/' + that.data.userInfo.id,
           data: {},
           success: res => {
             let empty = false;

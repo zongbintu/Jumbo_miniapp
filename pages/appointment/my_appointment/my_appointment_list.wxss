@@ -1,11 +1,4 @@
-.integral_detail {
-    position: relative;
-}
-
-.total {
-    margin: 30rpx;
-    color: cornflowerblue;
-}
+/* pages/appointment/my_appointment/my_appointment_list.wxss */
 
 /* 空态 */
 .empty_view {

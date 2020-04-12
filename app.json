@@ -5,7 +5,12 @@
     "pages/mall/mall",
     "pages/appointment/appointment",
     "pages/appointment/my_appointment/my_appointment",
+    "pages/appointment/my_appointment/my_appointment_list",
     "pages/me/me",
+    "pages/me/vip/vip",
+    "pages/me/physical/physical",
+    "pages/me/physical/physical_detail/physical_detail",
+    "pages/me/detail/detail",
     "pages/order/order_detail/order_detail",
     "pages/coupon/coupon",
     "pages/collection/collection",
@@ -19,6 +24,7 @@
     "pages/me/add_address/add_address",
     "pages/shopcart/shopcart",
     "pages/venue/venue",
+    "pages/venue/detail/detail",
     "pages/store/store",
     "pages/class/class",
     "pages/customed/customed",
@@ -47,22 +53,16 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/venue/venue",
+        "pagePath": "pages/appointment/appointment",
         "iconPath": "images/ic_venue.png",
         "selectedIconPath": "images/ic_venue_HL.png",
-        "text": "会馆"
+        "text": "预约"
       },
       {
         "pagePath": "pages/school/school",
         "iconPath": "images/ic_school.png",
         "selectedIconPath": "images/ic_school_HL.png",
         "text": "学院"
-      },
-      {
-        "pagePath": "pages/mall/mall",
-        "iconPath": "images/ic_mall.png",
-        "selectedIconPath": "images/ic_mall_HL.png",
-        "text": "商城"
       },
       {
         "pagePath": "pages/me/me",
@@ -95,6 +95,7 @@
     "van-sidebar-item": "vant-weapp/sidebar-item/index",
     "van-popup": "vant-weapp/popup/index",
     "van-tab": "vant-weapp/tab/index",
-    "van-tabs": "vant-weapp/tabs/index"
+    "van-tabs": "vant-weapp/tabs/index",
+    "van-datetime-picker": "vant-weapp/datetime-picker/index"
   }
 }

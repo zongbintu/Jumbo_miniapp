@@ -34,41 +34,63 @@ Page({
       "costPrice": 121,
       "startTime": null,
       image: "http://m.yoga00001.com/images/bxymn1.png"
-    }
+    },
+    userInfo: {},
+    remark: '',
+    course:{},
+    type: ['普通', '大团课', '精品课', '私教课', '提升课'],
+    courseFormat: ['普通', '线下课程', '免费视频课程', '收费视频课程', '体验课程'],
+    hourType: ['固定课时费', '固定课时费', '按上课人数收费']
   },
   onLoad: function (options) {
     filter.identity();
-    let that = this;
+
+    let model = JSON.parse(options.model);
+    // console.log(model);
+    
+    this.setData({
+      course: model
+    });
 
     let courseId = options.courseId;
     if (courseId === null || courseId === undefined) {
       courseId = 8;
     }
 
-    // 请求商品详情
-    request.send({
-      url: '/getCourseDetail/' + courseId,
-      data: {},
-      success: res => {
-        if (res.data.code === 0) {
-          if (res.data.course.image === null || res.data.course.image === undefined) {
-            // TODO 假图片
-            res.data.course.image="http://m.yoga00001.com/images/bxymn1.png"
-          }
-          that.setData({
-            product: res.data.course
-          });
-          WxParse.wxParse('article', 'html', res.data.course.courseDetail, that, 5);   // 实例化对象
-        } else {
-          wx.showToast({
-            title: '您所请求的内容不见咯~',
-            icon: 'none',
-            duration: 1500,
-            mask: true
-          });
-        }
+    let that = this;
+    wx.getStorage({
+      key: 'userInfo',
+      success: (result) => {
+        that.setData({
+          userInfo: result.data
+        });
       }
     });
+
+    // 请求商品详情
+    // request.send({
+    //   url: '/getCourseDetail/' + courseId,
+    //   data: {},
+    //   success: res => {
+    //     if (res.data.code === 0) {
+    //       if (res.data.course.image === null || res.data.course.image === undefined) {
+    //         // TODO 假图片
+    //         res.data.course.image="http://m.yoga00001.com/images/bxymn1.png"
+    //       }
+    //       that.setData({
+    //         product: res.data.course
+    //       });
+    //       WxParse.wxParse('article', 'html', res.data.course.courseDetail, that, 5);   // 实例化对象
+    //     } else {
+    //       wx.showToast({
+    //         title: '您所请求的内容不见咯~',
+    //         icon: 'none',
+    //         duration: 1500,
+    //         mask: true
+    //       });
+    //     }
+    //   }
+    // });
   },
   //预览图片
   previewImage: function (e) {
@@ -79,18 +101,30 @@ Page({
       urls: [this.data.product.image] // 需要预览的图片http链接列表  
     })
   },
+
+  remarkChange(option) {
+    // console.log(option);
+    this.setData({
+      remark: option.detail
+    });
+  },
+
   /**
    * 进行约课
    */
   goAppointment(event) {
-    let courseId = event.currentTarget.dataset.id;
-    let memberId = 9;
+    let curriculumId = event.currentTarget.dataset.id;
+    let memberId = this.data.userInfo.id;
+    let remark = this.data.remark;
+    // console.log("djzhao", remark);
+    
     // 发送请求
     request.send({
       url: '/submitAppointment',
       data: {
-        courseId,
-        memberId
+        curriculumId,
+        memberId,
+        remark
       },
       success: res => {
         if (res.data.code === 0) {

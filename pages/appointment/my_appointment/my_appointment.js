@@ -105,6 +105,16 @@ Page({
     });
   },
 
+  // 打开课程详情
+  gotoAppointmentDetail(e) {
+    let index = e.currentTarget.dataset.index;
+    var model = JSON.stringify(this.data.courses[index]);
+    console.log("djzhao", model);
+    wx.navigateTo({
+      url: '/pages/appointment/detail/detail?model=' + model,
+    })
+  },
+
   /**
    * 取消约课
    */
@@ -140,7 +150,7 @@ Page({
     let now = new Date();
     let arr = [];
     let weekDays = ['日', '一', '二', '三', '四', '五', '六'];
-    for (let i = 0; i < 7; ++i) {
+    for (let i = 0; i < 31; ++i) {
       let tempTime = new Date();
       tempTime.setDate(now.getDate() + i);
       // 周几

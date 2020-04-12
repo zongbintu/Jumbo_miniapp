@@ -1,0 +1,33 @@
+<!-- pages/me/vip/vip.wxml -->
+<view class="vip">
+
+    <!-- 空态 -->
+	<view wx:if="{{isEmpty}}" class="empty_view">
+
+		<view class="place_holder">
+			暂无记录...
+		</view>
+	</view>
+
+    <!-- 卡片正面 -->
+    <view wx:for="{{recode}}" class="card" wx:if="{{!isEmpty}}">
+        <view class="card-no">NO.{{item.cardId}}</view>
+        <view class="card-type">VIP {{type[item.cardType]}}</view>
+        <view class="card-expire">支持门店： {{item.supportVenues}}</view>
+        <!-- <view class="card-expire">剩余次数：27</view> -->
+    </view>
+    <!-- 卡片反面 -->
+    <!-- <view class="card-back">
+        <view class="card-introduce">
+            <text class="title">使用说明：</text>
+            <text class="item">· 此卡仅限本人使用，不可转借；</text>
+            <text class="item">· 凭此卡进入门店享受对应的优惠；</text>
+            <text class="item">· 此卡一旦遗失，请立即联系工作人员进行挂失；</text>
+            <text class="address">使用地址：静波瑜伽河西店</text>
+        </view>
+        <view class="card-copy">此卡的最终解释权归本公司所有</view>
+    </view> -->
+
+    <!-- 页脚 -->
+	<footer/>
+</view>

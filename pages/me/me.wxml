@@ -15,15 +15,15 @@
 				</view>
 			</view>
 		</view>
-		<!-- <view class="setting">
+		<navigator url="/pages/me/detail/detail" class="setting">
 			<van-icon name="setting-o" />
 			设置
-		</view> -->
+		</navigator>
 	</view>
 
 	<!-- 订单信息 -->
 	<view class="order">
-		<van-cell
+		<!-- <van-cell
 		 size="large"
 		 title="我的订单"
 		 is-link
@@ -36,14 +36,30 @@
 			<van-grid-item icon="logistics" text="待收货" bind:click="gotoOrder" data-index="3" />
 			<van-grid-item icon="records" text="待评价" bind:click="gotoOrder" data-index="4" />
 			<van-grid-item icon="after-sale" text="售后" bind:click="gotoOrder" data-index="5" />
-		</van-grid>
+		</van-grid> -->
 
+		<van-cell
+		 icon="vip-card-o"
+		 size="large"
+		 title="我的会员卡"
+		 link-type="navigateTo"
+		 url="/pages/me/vip/vip"
+		 is-link
+		/>
 		<van-cell
 		 icon="todo-list-o"
 		 size="large"
 		 title="我的预约"
 		 link-type="navigateTo"
 		 url="/pages/appointment/my_appointment/my_appointment"
+		 is-link
+		/>
+		<van-cell
+		 icon="smile-o"
+		 size="large"
+		 title="体测信息"
+		 link-type="navigateTo"
+		 url="/pages/me/physical/physical"
 		 is-link
 		/>
 		<van-cell
@@ -55,7 +71,7 @@
 		 is-link
 		/>
 		<van-cell
-		 icon="vip-card-o"
+		 icon="coupon-o"
 		 size="large"
 		 title="我的优惠券"
 		 url="/pages/coupon/coupon"
@@ -65,16 +81,16 @@
 		 icon="gold-coin-o"
 		 size="large"
 		 title="我的积分"
-		 url="/pages/me/integral/integral"
+		 url="/pages/me/integral/integral_detail/integral_detail"
 		 is-link
 		/>
-		<van-cell
+		<!-- <van-cell
 		 icon="star-o"
 		 size="large"
 		 title="我的收藏"
 		 url="/pages/collection/collection"
 		 is-link
-		/>
+		/> -->
 		<!-- <van-cell
 		 icon="balance-o"
 		 size="large"

@@ -1,0 +1,35 @@
+<!-- pages/me/detail/detail.wxml -->
+<view>
+    <van-cell-group>
+        <van-cell title="姓名" value="djzhao" />
+        <van-cell title="性别" value="男" />
+        <van-cell title="电话" value="18896807726" />
+        <van-field value="{{ username }}" required clearable label="昵称" input-align="right" placeholder="请输入昵称" bind:click-icon="onClickIcon" />
+        <van-cell title="生日" value="2020/02/03" />
+        <van-cell title="身份证号" value="320123***********9834" />
+        <van-field value="{{ username }}" required clearable label="家庭地址" input-align="right" placeholder="家庭地址" bind:click-icon="onClickIcon" />
+        <van-field value="{{ username }}" required clearable label="工作地址" input-align="right" placeholder="工作地址" bind:click-icon="onClickIcon" />
+        <van-cell title="教练" value="zhangyu" />
+        <van-cell title="备注" value="yiji" />
+        <van-cell title="宝宝生日" required value="{{ babyBirth }}" bind:click="showDataPick" />
+    </van-cell-group>
+    <van-button type="info" round  block>更新信息</van-button>
+    <!-- 页脚 -->
+	<footer/>
+
+    <van-popup
+    show="{{ showDatePicker }}"
+    position="bottom"
+    bind:close="onClose"
+    >
+        <van-datetime-picker
+        type="date"
+        value="{{ currentDate }}"
+        min-date="{{ minDate }}"
+        formatter="{{ formatter }}"
+        bind:confirm="selectedDate"
+        bind:cancel="cancelSelect"
+        />
+    </van-popup>
+
+</view>
